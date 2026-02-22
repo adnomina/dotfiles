@@ -1,27 +1,22 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](red)\
+[](green)\
 $os\
 $username\
-[](bg:peach fg:red)\
+[](bg:sapphire fg:green)\
 $directory\
-[](bg:yellow fg:peach)\
+[](bg:lavender fg:sapphire)\
 $git_branch\
 $git_status\
-[](fg:yellow bg:green)\
-$nodejs\
-[](fg:green bg:lavender)\
-$time\
 [ ](fg:lavender)\
-$line_break\
 $character"""
 
 palette = 'catppuccin_mocha'
 
 [os]
 disabled = false
-style = "bg:red fg:crust"
+style = "bg:green fg:crust"
 
 [os.symbols]
 Macos = "󰀵"
@@ -29,50 +24,24 @@ CachyOS = "󰣇"
 
 [username]
 show_always = true
-style_user = "bg:red fg:crust"
-style_root = "bg:red fg:crust"
+style_user = "bg:green fg:crust"
+style_root = "bg:green fg:crust"
 format = '[ $user]($style)'
 
 [directory]
-style = "bg:peach fg:crust"
+style = "bg:sapphire fg:crust"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = "󰝚 "
-"Pictures" = " "
-"Developer" = "󰲋 "
-
 [git_branch]
 symbol = ""
-style = "bg:yellow"
-format = '[[ $symbol $branch ](fg:crust bg:yellow)]($style)'
+style = "bg:lavender"
+format = '[[ $symbol $branch ](fg:crust bg:lavender)]($style)'
 
 [git_status]
-style = "bg:yellow"
-format = '[[($all_status$ahead_behind )](fg:crust bg:yellow)]($style)'
-
-[nodejs]
-symbol = ""
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
-
-[docker_context]
-symbol = ""
-style = "bg:sapphire"
-format = '[[ $symbol( $context) ](fg:crust bg:sapphire)]($style)'
-
-[time]
-disabled = false
-time_format = "%R"
 style = "bg:lavender"
-format = '[[  $time ](fg:crust bg:lavender)]($style)'
-
-[line_break]
-disabled = true
+format = '[[($all_status$ahead_behind )](fg:crust bg:lavender)]($style)'
 
 [character]
 disabled = false

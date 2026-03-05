@@ -1,112 +1,135 @@
 {
-  "agent_servers": {
-    "opencode": {
-      "type": "registry"
-    },
-    "github-copilot": {
-      "type": "registry"
-    }
-  },
-  "collaboration_panel": {
-    "default_width": 300.0
-  },
-  "notification_panel": {
-    "default_width": 300.0
-  },
-  "git_panel": {
-    "default_width": 300.0
-  },
-  "git": {
-    "inline_blame": {
-      "enabled": false
-    }
-  },
-  "terminal": {
-    "keep_selection_on_copy": false,
-    "copy_on_select": true,
-    "option_as_meta": true
-  },
-  "project_panel": {
-    "default_width": 300.0,
-    "indent_guides": {
-      "show": "never"
-    },
-  },
-  "use_system_window_tabs": true,
-  "tabs": {
-    "show_diagnostics": "all",
-    "file_icons": true,
-    "git_status": true
-  },
-  "title_bar": {
-    "show_menus": true,
-    "show_branch_icon": true
-  },
-  "close_on_file_delete": true,
-  "prettier": {
-    "allowed": true
-  },
-  "lsp": {
-    "vtsls": {
-      "settings": {
-        "typescript": {
-          "updateImportsOnFileMove": {
-            "enabled": "always"
-          }
-        },
-        "javascript": {
-          "updateImportsOnFileMove": {
-            "enabled": "always"
-          }
+    "context_servers": {
+        "figma-desktop": {
+            "enabled": true,
+            "url": "http://127.0.0.1:3845/mcp"
         }
-      },
-      "enable_lsp_tasks": true
-    }
-  },
-  "always_treat_brackets_as_autoclosed": true,
-  "indent_guides": {
-    "coloring": "indent_aware"
-  },
-  "soft_wrap": "preferred_line_length",
-  "vim": {
-    "use_smartcase_find": true
-  },
-  "toolbar": {
-    "code_actions": true
-  },
-  "hover_popover_delay": 200,
-  "vertical_scroll_margin": 0,
-  "which_key": {
-    "delay_ms": 250,
-    "enabled": true
-  },
-  "session": {
-    "trust_all_worktrees": true
-  },
-  "buffer_font_family": "JetBrainsMono Nerd Font",
-  "format_on_save": "off",
-  "show_whitespaces": "selection",
-  "minimap": {
-    "show": "always",
-  },
-  "edit_predictions": {
-    "provider": "copilot",
-    "mode": "eager",
-  },
-  "colorize_brackets": true,
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false,
-  },
-  "vim_mode": true,
-  "relative_line_numbers": "enabled",
-  "buffer_font_size": 16,
-  "theme": "Catppuccin Mocha",
-  "cursor_blink": false,
-  "scrollbar": {
-    "show": "never"
-  },
-  "tab_bar": {
-    "show": false
-  }
+    },
+    "outline_panel": {
+        "dock": "right"
+    },
+    "bottom_dock_layout": "full",
+    "agent": {
+        "dock": "left",
+        "default_profile": "ask",
+        "inline_assistant_model": {
+            "provider": "copilot_chat",
+            "model": "gpt-5.3-codex",
+            "enable_thinking": false
+        },
+        "default_model": {
+            "provider": "copilot_chat",
+            "model": "gpt-5.3-codex",
+            "enable_thinking": false
+        }
+    },
+    "agent_servers": {
+        "github-copilot-cli": {
+            "type": "registry"
+        },
+        "opencode": {
+            "type": "registry"
+        },
+        "github-copilot": {
+            "type": "registry"
+        }
+    },
+    "collaboration_panel": {
+        "dock": "right",
+        "button": false
+    },
+    "notification_panel": {
+        "dock": "right"
+    },
+    "git_panel": {
+        "dock": "right"
+    },
+    "git": {
+        "inline_blame": {
+            "enabled": false
+        }
+    },
+    "terminal": {
+        "keep_selection_on_copy": false,
+        "copy_on_select": true,
+        "option_as_meta": true
+    },
+    "project_panel": {
+        "dock": "right"
+    },
+    "use_system_window_tabs": true,
+    "tabs": {
+        "show_diagnostics": "all",
+        "file_icons": true,
+        "git_status": true
+    },
+    "title_bar": {
+        "show_menus": true,
+        "show_branch_icon": true
+    },
+    "close_on_file_delete": true,
+    "prettier": {
+        "allowed": true
+    },
+    "lsp": {
+        "vtsls": {
+            "settings": {
+                "typescript": {
+                    "updateImportsOnFileMove": {
+                        "enabled": "always"
+                    }
+                },
+                "javascript": {
+                    "updateImportsOnFileMove": {
+                        "enabled": "always"
+                    }
+                }
+            },
+            "enable_lsp_tasks": true
+        }
+    },
+    "always_treat_brackets_as_autoclosed": true,
+    "indent_guides": {
+        "coloring": "indent_aware"
+    },
+    "soft_wrap": "preferred_line_length",
+    "vim": {
+        "use_smartcase_find": true
+    },
+    "toolbar": {
+        "code_actions": true
+    },
+    "hover_popover_delay": 250,
+    "vertical_scroll_margin": 0,
+    "which_key": {
+        "delay_ms": 250,
+        "enabled": true
+    },
+    "session": {
+        "trust_all_worktrees": true
+    },
+    "buffer_font_family": "JetBrainsMono Nerd Font",
+    "format_on_save": "off",
+    "show_whitespaces": "selection",
+    "minimap": {
+        "show": "always"
+    },
+    "edit_predictions": {
+        "provider": "copilot",
+        "mode": "eager"
+    },
+    "colorize_brackets": true,
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false
+    },
+    "vim_mode": true,
+    "relative_line_numbers": "enabled",
+    "buffer_font_size": 16,
+    "theme": "Catppuccin Mocha",
+    "cursor_blink": false,
+    "scrollbar": {
+        "show": "never"
+    },
+    "document_symbols": "on"
 }

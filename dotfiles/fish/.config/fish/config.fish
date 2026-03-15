@@ -8,5 +8,14 @@ set -gx PATH /run/current-system/sw/bin $PATH
 alias la="ls -la"
 alias vi='nvim'
 alias vim='nvim'
+alias cat="bat"
+alias less="bat"
 
 starship init fish | source
+
+# pnpm
+set -gx PNPM_HOME "/Users/nicolas/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end

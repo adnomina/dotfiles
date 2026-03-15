@@ -27,35 +27,30 @@ The script will:
 
 | Package | Description |
 |---------|-------------|
-| `btop` | System resource monitor |
-| `coreutils` | GNU core utilities |
-| `docker` | Docker CLI |
-| `findutils` | GNU find/xargs/locate |
 | `fish` | Fish shell |
-| `gawk` | GNU awk |
 | `gh` | GitHub CLI |
 | `git` | Version control |
-| `gnu-sed` | GNU sed |
-| `gnupg` | GnuPG encryption/signing |
-| `jq` | JSON processor |
 | `mise` | Polyglot runtime version manager |
 | `neovim` (HEAD) | Neovim, built from latest source |
-| `ripgrep` | Fast recursive search (`rg`) |
-| `starship` | Cross-shell prompt |
-| `stow` | Symlink-based dotfile management |
-| `tealdeer` | Fast `tldr` client |
-| `tmux` | Terminal multiplexer |
-| `opencode` | Open-source AI agent (from `anomalyco/tap`) |
+| `postgresql@18` | PostgreSQL database |
+| `tree-sitter` | Parser generator tool |
+| `tree-sitter-cli` | Tree-sitter CLI |
+| `yazi` | Terminal file manager |
 
 ### Casks
 
 | Cask | Description |
 |------|-------------|
-| `claude-code` | Claude AI coding assistant |
+| `aerospace` | Tiling window manager (from `nikitabobko/tap`) |
+| `beekeeper-studio` | SQL editor and database manager |
+| `copilot-cli` | GitHub Copilot CLI |
 | `firefox@developer-edition` | Firefox Developer Edition |
 | `font-jetbrains-mono-nerd-font` | JetBrains Mono Nerd Font |
 | `ghostty` | Ghostty terminal emulator |
 | `obsidian` | Markdown note-taking |
+| `slack` | Team messaging |
+| `thunderbird` | Email client |
+| `yaak` | API client |
 | `zed` | Zed code editor |
 
 ## Dotfiles
@@ -64,9 +59,13 @@ Dotfiles are organized as [GNU Stow](https://www.gnu.org/software/stow/) package
 
 ```
 dotfiles/
-├── fish/           # Fish shell config + Starship prompt
+├── aerospace/      # Aerospace tiling window manager config
+├── fish/           # Fish shell config
 ├── ghostty/        # Ghostty terminal config + Catppuccin theme
 ├── nvim/           # Neovim config (Lua, native vim.pack + vim.lsp)
+├── starship/       # Starship prompt config
+├── tmux/           # Tmux config
+├── wezterm/        # WezTerm terminal emulator config
 └── zed/            # Zed editor settings + keybindings
 ```
 

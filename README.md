@@ -48,8 +48,8 @@ The script will:
 | `font-jetbrains-mono-nerd-font` | JetBrains Mono Nerd Font |
 | `ghostty` | Ghostty terminal emulator |
 | `obsidian` | Markdown note-taking |
+| `arc` | Arc browser |
 | `slack` | Team messaging |
-| `thunderbird` | Email client |
 | `yaak` | API client |
 | `zed` | Zed code editor |
 

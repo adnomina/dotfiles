@@ -27,7 +27,7 @@ fi
 
 # Symlink dotfiles with GNU Stow
 echo "Symlinking dotfiles ..."
-stow --target="$HOME" --dir=./dotfiles fish ghostty nvim zed tmux starship aerospace wezterm
+stow --target="$HOME" --dir=./dotfiles fish ghostty nvim zed tmux starship aerospace wezterm nix-darwin
 
 # Add fish to list of standard shells if not already present
 echo "Configuring fish as default shell ..."

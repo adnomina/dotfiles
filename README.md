@@ -69,6 +69,7 @@ Packages are declared in `flake.nix`. Nix manages most software; Homebrew is use
 | `copilot-cli` | GitHub Copilot CLI |
 | `firefox@developer-edition` | Firefox Developer Edition |
 | `ghostty` | Ghostty terminal emulator |
+| `karabiner-elements` | Keyboard remapper |
 | `yaak` | API client |
 
 ## Dotfiles
@@ -77,9 +78,10 @@ Dotfiles are organized as [GNU Stow](https://www.gnu.org/software/stow/) package
 
 ```
 dotfiles/
-├── aerospace/      # Aerospace tiling window manager config
+├── aerospace/      # AeroSpace tiling window manager config (cmd as modifier)
 ├── fish/           # Fish shell config
 ├── ghostty/        # Ghostty terminal config + Catppuccin theme
+├── karabiner/      # Karabiner-Elements: Linux-style ctrl shortcuts + caps lock → ctrl
 ├── nvim/           # Neovim config (Lua, native vim.pack + vim.lsp)
 ├── starship/       # Starship prompt config
 ├── tmux/           # Tmux config

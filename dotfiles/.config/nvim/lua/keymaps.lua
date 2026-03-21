@@ -22,14 +22,6 @@ keymap.set(
     { desc = "Show diagnostics" }
 )
 
--- Go to definition
-keymap.set(
-    "n",
-    "grd",
-    "<cmd>lua vim.lsp.buf.definition()<CR>",
-    { desc = "Go to definition" }
-)
-
 -- Update plugins with vim.pack
 keymap.set(
     "n",

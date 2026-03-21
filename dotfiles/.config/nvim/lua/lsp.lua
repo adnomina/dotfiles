@@ -1,3 +1,15 @@
+-- Global capabilities for all LSP servers
+vim.lsp.config("*", {
+    capabilities = {
+        workspace = {
+            fileOperations = {
+                didRename = true,
+                willRename = true,
+            },
+        },
+    },
+})
+
 vim.lsp.enable({
     "bashls",
     "cssls",
@@ -9,5 +21,52 @@ vim.lsp.enable({
     "prismals",
     "sqlls",
     "tailwindcss",
-    "vtsls"
+    "vtsls",
+})
+
+vim.diagnostic.config({
+    underline = true,
+    update_in_insert = false,
+    virtual_text = {
+        spacing = 4,
+        source = "if_many",
+        prefix = "●",
+    },
+    severity_sort = true,
+    signs = {
+        text = {
+            [vim.diagnostic.severity.ERROR] = "",
+            [vim.diagnostic.severity.WARN] = "",
+            [vim.diagnostic.severity.HINT] = "",
+            [vim.diagnostic.severity.INFO] = "",
+        },
+    },
+})
+
+vim.api.nvim_create_autocmd("LspAttach", {
+    callback = function(event)
+        local buf = event.buf
+        local client = vim.lsp.get_client_by_id(event.data.client_id)
+
+        local function map(mode, lhs, rhs, desc)
+            vim.keymap.set(mode, lhs, rhs, { buffer = buf, desc = desc, silent = true })
+        end
+
+        map("n", "gd", vim.lsp.buf.definition, "Goto Definition")
+        map("n", "gr", vim.lsp.buf.references, "References")
+        map("n", "gI", vim.lsp.buf.implementation, "Goto Implementation")
+        map("n", "gy", vim.lsp.buf.type_definition, "Goto Type Definition")
+        map("n", "gD", vim.lsp.buf.declaration, "Goto Declaration")
+        map("n", "K", vim.lsp.buf.hover, "Hover")
+        map("n", "gK", vim.lsp.buf.signature_help, "Signature Help")
+        map({ "n", "x" }, "<leader>ca", vim.lsp.buf.code_action, "Code Action")
+        map("n", "<leader>cr", vim.lsp.buf.rename, "Rename")
+
+        if client then
+            -- Inlay hints
+            if client:supports_method("textDocument/inlayHint") and vim.bo[buf].buftype == "" then
+                vim.lsp.inlay_hint.enable(true, { bufnr = buf })
+            end
+        end
+    end,
 })

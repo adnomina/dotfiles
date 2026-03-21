@@ -37,14 +37,13 @@ A minimal Neovim 0.12 setup using native plugin management (`vim.pack`) and buil
 - **Shift round**: Round indent to nearest multiple of shiftwidth
 
 ### Behavior
-- **Case-insensitive search**: Ignore case in search patterns
+- **Search**: Case-insensitive by default, case-sensitive when uppercase is typed (smartcase)
 - **Undo persistence**: Undo history saved to `~/.vim/undodir`
 - **Clipboard**: Sync with system clipboard (unnamedplus)
 - **No swap files**: Swap file creation disabled
 - **No mouse**: Mouse support disabled
 - **Incremental command**: Live command preview without split
 - **Update time**: 300ms (for CursorHold events)
-- **Diagnostics**: Inline virtual text enabled
 
 ### File Explorer (netrw)
 - **Tree view**: List style with tree hierarchy
@@ -54,6 +53,8 @@ A minimal Neovim 0.12 setup using native plugin management (`vim.pack`) and buil
 
 ## Keyboard Shortcuts
 
+### General
+
 | Keybinding | Mode | Action |
 |------------|------|--------|
 | `jk` | Insert | Exit insert mode |
@@ -61,14 +62,32 @@ A minimal Neovim 0.12 setup using native plugin management (`vim.pack`) and buil
 | `<Leader>d` | Normal | Show diagnostics |
 | `<Leader>u` | Normal | Update plugins |
 | `<Leader>e` | Normal | Open file explorer |
-| `grd` | Normal | Go to definition (LSP) |
 | `ff` | Normal | Find files (fff.nvim) |
 | `<C-u>` | Normal | Page up (centered) |
 | `<C-d>` | Normal | Page down (centered) |
 | `<leader>?` | Normal | Show buffer keymaps (which-key) |
 | `<C-w><Space>` | Normal | Window hydra mode (which-key) |
-| `]h` / `[h` | Normal | Next/prev git hunk |
-| `]H` / `[H` | Normal | Last/first git hunk |
+
+### LSP (buffer-local, set on attach)
+
+| Keybinding | Mode | Action |
+|------------|------|--------|
+| `gd` | Normal | Go to definition |
+| `gr` | Normal | References |
+| `gI` | Normal | Go to implementation |
+| `gy` | Normal | Go to type definition |
+| `gD` | Normal | Go to declaration |
+| `K` | Normal | Hover documentation |
+| `gK` | Normal | Signature help |
+| `<leader>ca` | Normal, Visual | Code action |
+| `<leader>cr` | Normal | Rename symbol |
+
+### Git (gitsigns, buffer-local)
+
+| Keybinding | Mode | Action |
+|------------|------|--------|
+| `]h` / `[h` | Normal | Next/prev hunk |
+| `]H` / `[H` | Normal | Last/first hunk |
 | `<leader>ghs` | Normal, Visual | Stage hunk |
 | `<leader>ghr` | Normal, Visual | Reset hunk |
 | `<leader>ghS` | Normal | Stage buffer |
@@ -85,9 +104,13 @@ A minimal Neovim 0.12 setup using native plugin management (`vim.pack`) and buil
 
 ## Configuration Details
 
-### LSP Servers
+### LSP
 
-Enabled via `vim.lsp.enable()`:
+Configured via native `vim.lsp.enable()` and `vim.lsp.config()`.
+
+**Global capabilities** (all servers): workspace file operation notifications (`didRename`, `willRename`)
+
+**Enabled servers:**
 
 | Server | Language |
 |--------|----------|
@@ -102,6 +125,15 @@ Enabled via `vim.lsp.enable()`:
 | `sqlls` | SQL |
 | `tailwindcss` | Tailwind CSS |
 | `vtsls` | TypeScript/JavaScript |
+
+**On attach (per buffer):**
+- Inlay hints enabled when supported by the server
+
+### Diagnostics
+- Underline enabled, virtual text disabled during insert mode
+- Virtual text prefix `●`, spacing 4, source shown when multiple servers
+- Severity-sorted with Nerd Font icons in the sign column
+- Floating window on `CursorHold` (auto-closes on move/insert)
 
 ### Treesitter Languages
 
@@ -123,20 +155,13 @@ Auto-installed on new machines: `javascript`, `typescript`, `tsx`, `css`, `html`
 
 ### Keybinding Helper (which-key.nvim)
 - Helix preset style
-- Displays available keybindings when you start typing a key sequence
 - Shows descriptions for all mapped commands with leader key groups labeled
 - `<leader>?` to show all buffer-local keymaps
 - `<C-w><Space>` for interactive window hydra mode
 
 ### fff.nvim
 - Lazy sync mode enabled for performance
-- Debug mode with match score display
 - Binary auto-downloads on plugin updates
-
-### Floating Diagnostics
-- Automatically displayed on cursor hold (CursorHold event)
-- Shows LSP diagnostics for current position
-- Auto-closes on buffer leave, cursor movement, or insert mode
 
 ### Visual Enhancements
 - **Yank highlighting**: Highlighted text flashes for 150ms when copied

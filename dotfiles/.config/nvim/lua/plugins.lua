@@ -114,10 +114,13 @@ require("which-key").setup({
     spec = {
         {
             mode = { "n", "x" },
-            { "<leader>e", desc = "File explorer" },
-            { "<leader>f", desc = "Format file" },
-            { "<leader>d", desc = "Show diagnostics" },
-            { "<leader>u", desc = "Update plugins" },
+            { "<leader>c",  group = "code" },
+            { "<leader>e",  desc = "File explorer" },
+            { "<leader>f",  desc = "Format file" },
+            { "<leader>d",  desc = "Show diagnostics" },
+            { "<leader>u",  desc = "Update plugins" },
+            { "<leader>g",  group = "git" },
+            { "<leader>gh", group = "hunks" },
             { "[",         group = "prev" },
             { "]",         group = "next" },
             { "g",         group = "goto" },

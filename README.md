@@ -65,7 +65,6 @@ Packages are declared in `flake.nix`. Nix manages most software; Homebrew is use
 | `aerospace` | Tiling window manager (from `nikitabobko/tap`) |
 | `arc` | Arc browser |
 | `beekeeper-studio` | SQL editor and database manager |
-| `copilot-cli` | GitHub Copilot CLI |
 | `firefox@developer-edition` | Firefox Developer Edition |
 | `ghostty` | Ghostty terminal emulator |
 | `karabiner-elements` | Keyboard remapper |

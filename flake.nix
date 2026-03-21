@@ -63,8 +63,7 @@ pkgs.tree-sitter
                     "karabiner-elements"
                     "beekeeper-studio"
                     "ghostty"
-                    "copilot-cli"
-                    "firefox@developer-edition"
+"firefox@developer-edition"
                     "yaak"
                 ];
             };

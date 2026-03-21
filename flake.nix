@@ -42,6 +42,7 @@
                     pkgs.stow
                     pkgs.tealdeer
 		    pkgs.tree-sitter
+                    pkgs.vscode
                     pkgs.yazi
                     pkgs.zed-editor
                 ];

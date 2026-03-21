@@ -16,7 +16,7 @@ A minimal Neovim 0.12 setup using native plugin management (`vim.pack`) and buil
 | **lualine.nvim** | Status line | Minimal status/info line at bottom of window |
 | **fff.nvim** | Fuzzy file finder | Fast file search with fuzzy matching |
 | **nvim-lspconfig** | LSP configurations | Language server protocol client configs |
-| **gitsigns.nvim** | Git integration | Git signs in the sign column |
+| **gitsigns.nvim** | Git integration | Git signs in the sign column, hunk navigation and staging |
 | **nvim-treesitter** | Syntax highlighting | Tree-sitter based parsing and highlighting |
 
 ## Editor Settings
@@ -67,6 +67,19 @@ A minimal Neovim 0.12 setup using native plugin management (`vim.pack`) and buil
 | `<C-d>` | Normal | Page down (centered) |
 | `<leader>?` | Normal | Show buffer keymaps (which-key) |
 | `<C-w><Space>` | Normal | Window hydra mode (which-key) |
+| `]h` / `[h` | Normal | Next/prev git hunk |
+| `]H` / `[H` | Normal | Last/first git hunk |
+| `<leader>ghs` | Normal, Visual | Stage hunk |
+| `<leader>ghr` | Normal, Visual | Reset hunk |
+| `<leader>ghS` | Normal | Stage buffer |
+| `<leader>ghu` | Normal | Undo stage hunk |
+| `<leader>ghR` | Normal | Reset buffer |
+| `<leader>ghp` | Normal | Preview hunk inline |
+| `<leader>ghb` | Normal | Blame line (full) |
+| `<leader>ghB` | Normal | Blame buffer |
+| `<leader>ghd` | Normal | Diff this |
+| `<leader>ghD` | Normal | Diff this (against last commit) |
+| `ih` | Operator, Visual | Select hunk (text object) |
 
 **Leader key**: Spacebar (`<Space>`)
 
@@ -102,11 +115,16 @@ Auto-installed on new machines: `javascript`, `typescript`, `tsx`, `css`, `html`
 - `<C-b>` / `<C-f>` to scroll documentation
 - `<C-k>` to show function signatures
 
+### Git (gitsigns.nvim)
+- Custom Nerd Font signs: `▎` for add/change/untracked, `` for delete
+- Staged changes shown with separate sign set
+- Hunk navigation respects diff mode (`]c`/`[c`) vs normal mode
+- `ih` text object for selecting hunks in operator/visual mode
+
 ### Keybinding Helper (which-key.nvim)
 - Helix preset style
 - Displays available keybindings when you start typing a key sequence
 - Shows descriptions for all mapped commands with leader key groups labeled
-- Popup anchored to the bottom-right corner in a single column
 - `<leader>?` to show all buffer-local keymaps
 - `<C-w><Space>` for interactive window hydra mode
 

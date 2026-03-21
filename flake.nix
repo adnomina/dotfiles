@@ -86,6 +86,13 @@ pkgs.tree-sitter
 
             system.primaryUser = "nicolas";
 
+	    system.defaults = {
+		dock.autohide = true;
+		finder.FXPreferredViewStyle = "clmv";
+		loginwindow.GuestEnabled = false;
+		NSGlobalDomain.AppleInterfaceStyle = "Dark";
+	    };
+
             nixpkgs = {
                 # The platform the configuration will be used on.
                 hostPlatform = "aarch64-darwin";

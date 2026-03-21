@@ -11,21 +11,24 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Linux-style shortcuts: ctrl+[a/c/v/x/z/y/s/w/q/t/n/f/p/r/l] → cmd equivalent (except in terminals)",
+                        "description": "Remap cmd operations to ctrl equivalents",
                         "manipulators": [
                             {
-                                "description": "ctrl+a → cmd+a (select all)",
+                                "description": "Select all",
                                 "from": {
                                     "key_code": "a",
                                     "modifiers": {
-                                        "mandatory": ["left_control"],
-                                        "optional": ["shift"]
+                                        "mandatory": [
+                                            "left_control"
+                                        ]
                                     }
                                 },
                                 "to": [
                                     {
                                         "key_code": "a",
-                                        "modifiers": ["left_command"]
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
                                     }
                                 ],
                                 "conditions": [
@@ -39,18 +42,21 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "ctrl+c → cmd+c (copy)",
+                                "description": "Copy",
                                 "from": {
                                     "key_code": "c",
                                     "modifiers": {
-                                        "mandatory": ["left_control"],
-                                        "optional": ["shift"]
+                                        "mandatory": [
+                                            "left_control"
+                                        ]
                                     }
                                 },
                                 "to": [
                                     {
                                         "key_code": "c",
-                                        "modifiers": ["left_command"]
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
                                     }
                                 ],
                                 "conditions": [
@@ -64,18 +70,21 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "ctrl+v → cmd+v (paste)",
+                                "description": "Paste",
                                 "from": {
                                     "key_code": "v",
                                     "modifiers": {
-                                        "mandatory": ["left_control"],
-                                        "optional": ["shift"]
+                                        "mandatory": [
+                                            "left_control"
+                                        ]
                                     }
                                 },
                                 "to": [
                                     {
                                         "key_code": "v",
-                                        "modifiers": ["left_command"]
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
                                     }
                                 ],
                                 "conditions": [
@@ -89,18 +98,21 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "ctrl+x → cmd+x (cut)",
+                                "description": "Cut",
                                 "from": {
                                     "key_code": "x",
                                     "modifiers": {
-                                        "mandatory": ["left_control"],
-                                        "optional": ["shift"]
+                                        "mandatory": [
+                                            "left_control"
+                                        ]
                                     }
                                 },
                                 "to": [
                                     {
                                         "key_code": "x",
-                                        "modifiers": ["left_command"]
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
                                     }
                                 ],
                                 "conditions": [
@@ -114,18 +126,21 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "ctrl+s → cmd+s (save)",
+                                "description": "Save",
                                 "from": {
                                     "key_code": "s",
                                     "modifiers": {
-                                        "mandatory": ["left_control"],
-                                        "optional": ["shift"]
+                                        "mandatory": [
+                                            "left_control"
+                                        ]
                                     }
                                 },
                                 "to": [
                                     {
                                         "key_code": "s",
-                                        "modifiers": ["left_command"]
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
                                     }
                                 ],
                                 "conditions": [
@@ -139,17 +154,21 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "ctrl+w → cmd+w (close tab/window)",
+                                "description": "Close tab",
                                 "from": {
                                     "key_code": "w",
                                     "modifiers": {
-                                        "mandatory": ["left_control"]
+                                        "mandatory": [
+                                            "left_control"
+                                        ]
                                     }
                                 },
                                 "to": [
                                     {
                                         "key_code": "w",
-                                        "modifiers": ["left_command"]
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
                                     }
                                 ],
                                 "conditions": [
@@ -163,18 +182,21 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "ctrl+t → cmd+t (new tab)",
+                                "description": "New tab",
                                 "from": {
                                     "key_code": "t",
                                     "modifiers": {
-                                        "mandatory": ["left_control"],
-                                        "optional": ["shift"]
+                                        "mandatory": [
+                                            "left_control"
+                                        ]
                                     }
                                 },
                                 "to": [
                                     {
                                         "key_code": "t",
-                                        "modifiers": ["left_command"]
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
                                     }
                                 ],
                                 "conditions": [
@@ -188,93 +210,21 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "ctrl+f → cmd+f (find)",
+                                "description": "Find",
                                 "from": {
                                     "key_code": "f",
                                     "modifiers": {
-                                        "mandatory": ["left_control"],
-                                        "optional": ["shift"]
+                                        "mandatory": [
+                                            "left_control"
+                                        ]
                                     }
                                 },
                                 "to": [
                                     {
                                         "key_code": "f",
-                                        "modifiers": ["left_command"]
-                                    }
-                                ],
-                                "conditions": [
-                                    {
-                                        "type": "frontmost_application_unless",
-                                        "bundle_identifiers": [
-                                            "^com\\.mitchellh\\.ghostty$"
+                                        "modifiers": [
+                                            "left_command"
                                         ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "ctrl+p → cmd+p (print/command palette)",
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": {
-                                        "mandatory": ["left_control"],
-                                        "optional": ["shift"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "p",
-                                        "modifiers": ["left_command"]
-                                    }
-                                ],
-                                "conditions": [
-                                    {
-                                        "type": "frontmost_application_unless",
-                                        "bundle_identifiers": [
-                                            "^com\\.mitchellh\\.ghostty$",
-                                            "^org\\.mozilla\\.firefoxdeveloperedition$",
-                                            "^org\\.mozilla\\.firefox$"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "ctrl+o → cmd+o (open)",
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": {
-                                        "mandatory": ["left_control"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "o",
-                                        "modifiers": ["left_command"]
-                                    }
-                                ],
-                                "conditions": [
-                                    {
-                                        "type": "frontmost_application_unless",
-                                        "bundle_identifiers": [
-                                            "^com\\.mitchellh\\.ghostty$"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "ctrl+o → cmd+o (open)",
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": {
-                                        "mandatory": ["left_control"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "o",
-                                        "modifiers": ["left_command"]
                                     }
                                 ],
                                 "conditions": [
@@ -295,8 +245,14 @@
             "selected": true,
             "simple_modifications": [
                 {
-                    "from": { "key_code": "caps_lock" },
-                    "to": [{ "key_code": "left_control" }]
+                    "from": {
+                        "key_code": "caps_lock"
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_control"
+                        }
+                    ]
                 }
             ],
             "virtual_hid_keyboard": {

@@ -117,4 +117,3 @@ Auto-installed on new machines: `javascript`, `typescript`, `tsx`, `css`, `html`
 
 ### Visual Enhancements
 - **Yank highlighting**: Highlighted text flashes for 150ms when copied
-- **Search highlighting**: Disabled (hlsearch off) for cleaner display

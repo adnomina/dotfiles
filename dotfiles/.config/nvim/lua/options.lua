@@ -5,6 +5,7 @@ opt.textwidth = 80
 opt.signcolumn = "yes:1"
 opt.termguicolors = true
 opt.ignorecase = true
+opt.smartcase = true
 opt.swapfile = false
 opt.autoindent = true
 opt.expandtab = true
@@ -41,12 +42,9 @@ vim.g.netrw_altv = 1
 vim.g.fff = {
     lazy_sync = true,
     debug = {
-        enabled = true,
         show_scores = true,
     },
 }
 
 vim.cmd.filetype("plugin indent on")
 vim.cmd.colorscheme("catppuccin")
-
-vim.diagnostic.config({ virtual_text = true })

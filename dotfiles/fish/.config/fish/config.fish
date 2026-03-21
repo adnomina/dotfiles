@@ -13,6 +13,7 @@ alias less="bat"
 alias cc="claude"
 alias oc="opencode"
 
+mise activate fish | source
 starship init fish | source
 
 # pnpm

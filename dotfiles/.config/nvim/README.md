@@ -65,6 +65,8 @@ A minimal Neovim 0.12 setup using native plugin management (`vim.pack`) and buil
 | `ff` | Normal | Find files (fff.nvim) |
 | `<C-u>` | Normal | Page up (centered) |
 | `<C-d>` | Normal | Page down (centered) |
+| `<leader>?` | Normal | Show buffer keymaps (which-key) |
+| `<C-w><Space>` | Normal | Window hydra mode (which-key) |
 
 **Leader key**: Spacebar (`<Space>`)
 
@@ -101,9 +103,12 @@ Auto-installed on new machines: `javascript`, `typescript`, `tsx`, `css`, `html`
 - `<C-k>` to show function signatures
 
 ### Keybinding Helper (which-key.nvim)
+- Helix preset style
 - Displays available keybindings when you start typing a key sequence
-- Shows descriptions for all mapped commands
-- Helps discover keyboard shortcuts
+- Shows descriptions for all mapped commands with leader key groups labeled
+- Popup anchored to the bottom-right corner in a single column
+- `<leader>?` to show all buffer-local keymaps
+- `<C-w><Space>` for interactive window hydra mode
 
 ### fff.nvim
 - Lazy sync mode enabled for performance

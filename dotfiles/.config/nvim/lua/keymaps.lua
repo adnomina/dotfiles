@@ -52,3 +52,17 @@ keymap.set(
     function() require("fff").find_files() end,
     { desc = "FFFind files" }
 )
+
+keymap.set(
+    "n",
+    "<leader>?",
+    function() require("which-key").show({ global = false }) end,
+    { desc = "Buffer keymaps (which-key)" }
+)
+
+keymap.set(
+    "n",
+    "<c-w><space>",
+    function() require("which-key").show({ keys = "<c-w>", loop = true }) end,
+    { desc = "Window hydra mode (which-key)" }
+)

@@ -56,3 +56,21 @@ require("catppuccin").setup({
 require("lualine").setup()
 
 require("gitsigns").setup()
+
+require("which-key").setup({
+    preset = "helix",
+    spec = {
+        {
+            mode = { "n", "x" },
+            { "<leader>e", desc = "File explorer" },
+            { "<leader>f", desc = "Format file" },
+            { "<leader>d", desc = "Show diagnostics" },
+            { "<leader>u", desc = "Update plugins" },
+            { "[",         group = "prev" },
+            { "]",         group = "next" },
+            { "g",         group = "goto" },
+            { "z",         group = "fold" },
+            { "gx",        desc = "Open with system app" },
+        },
+    },
+})

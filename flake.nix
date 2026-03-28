@@ -32,7 +32,8 @@
                     pkgs.jq
                     pkgs.mise
                     neovim-nightly-overlay.packages.${pkgs.stdenv.hostPlatform.system}.default
-		    pkgs.nil
+          		    pkgs.nil
+					pkgs.nixd
                     pkgs.obsidian
                     pkgs.opencode
                     pkgs.postgresql_18
@@ -41,7 +42,7 @@
                     pkgs.starship
                     pkgs.stow
                     pkgs.tealdeer
-		    pkgs.tree-sitter
+          		    pkgs.tree-sitter
                     pkgs.vscode
                     pkgs.yazi
                     pkgs.zed-editor

@@ -54,20 +54,62 @@ label = 'Aerospace'
     [[leaderMode.bindings.children]]
     iconPath = 'desktopcomputer'
     key = '1'
-    label = "workspace \U0001F4AC"
-    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520workspace%2520%25F0%259F%2592%25AC/Run%20Text%20as%20Shell%20Command'
+    label = 'workspace 1'
+    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520workspace%25201/Run%20Text%20as%20Shell%20Command'
 
     [[leaderMode.bindings.children]]
     iconPath = 'desktopcomputer'
     key = '2'
-    label = "workspace \U0001F310"
-    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520workspace%2520%25F0%259F%258C%2590/Run%20Text%20as%20Shell%20Command'
+    label = 'workspace 2'
+    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520workspace%25202/Run%20Text%20as%20Shell%20Command'
 
     [[leaderMode.bindings.children]]
     iconPath = 'desktopcomputer'
     key = '3'
-    label = "workspace \U0001F4BB"
-    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520workspace%2520%25F0%259F%2592%25BB/Run%20Text%20as%20Shell%20Command'
+    label = 'workspace 3'
+    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520workspace%25203/Run%20Text%20as%20Shell%20Command'
+
+    [[leaderMode.bindings.children]]
+    iconPath = 'desktopcomputer'
+    key = '4'
+    label = 'workspace 4'
+    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520workspace%25204/Run%20Text%20as%20Shell%20Command'
+
+    [[leaderMode.bindings.children]]
+    iconPath = 'desktopcomputer'
+    key = '5'
+    label = 'workspace 5'
+    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520workspace%25205/Run%20Text%20as%20Shell%20Command'
+
+    [[leaderMode.bindings.children]]
+    iconPath = 'desktopcomputer'
+    key = '6'
+    label = 'workspace 6'
+    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520workspace%25206/Run%20Text%20as%20Shell%20Command'
+
+    [[leaderMode.bindings.children]]
+    iconPath = 'desktopcomputer'
+    key = '7'
+    label = 'workspace 7'
+    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520workspace%25207/Run%20Text%20as%20Shell%20Command'
+
+    [[leaderMode.bindings.children]]
+    iconPath = 'desktopcomputer'
+    key = '8'
+    label = 'workspace 8'
+    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520workspace%25208/Run%20Text%20as%20Shell%20Command'
+
+    [[leaderMode.bindings.children]]
+    iconPath = 'desktopcomputer'
+    key = '9'
+    label = 'workspace 9'
+    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520workspace%25209/Run%20Text%20as%20Shell%20Command'
+
+    [[leaderMode.bindings.children]]
+    iconPath = 'desktopcomputer'
+    key = '0'
+    label = 'workspace 10'
+    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520workspace%252010/Run%20Text%20as%20Shell%20Command'
 
     [[leaderMode.bindings.children]]
     iconPath = 'desktopcomputer'
@@ -152,33 +194,103 @@ label = 'Aerospace'
 
         [[leaderMode.bindings.children.children]]
         key = '1'
-        label = "to \U0001F4AC + follow"
-        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520--focus-follows-window%2520%25F0%259F%2592%25AC/Run%20Text%20as%20Shell%20Command'
+        label = 'to 1 + follow'
+        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520--focus-follows-window%25201/Run%20Text%20as%20Shell%20Command'
 
         [[leaderMode.bindings.children.children]]
         key = '!'
-        label = "to \U0001F4AC"
-        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520%25F0%259F%2592%25AC/Run%20Text%20as%20Shell%20Command'
+        label = 'to 1'
+        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%25201/Run%20Text%20as%20Shell%20Command'
 
         [[leaderMode.bindings.children.children]]
         key = '2'
-        label = "to \U0001F310 + follow"
-        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520--focus-follows-window%2520%25F0%259F%258C%2590/Run%20Text%20as%20Shell%20Command'
+        label = 'to 2 + follow'
+        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520--focus-follows-window%25202/Run%20Text%20as%20Shell%20Command'
 
         [[leaderMode.bindings.children.children]]
         key = '@'
-        label = "to \U0001F310"
-        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520%25F0%259F%258C%2590/Run%20Text%20as%20Shell%20Command'
+        label = 'to 2'
+        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%25202/Run%20Text%20as%20Shell%20Command'
 
         [[leaderMode.bindings.children.children]]
         key = '3'
-        label = "to \U0001F4BB + follow"
-        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520--focus-follows-window%2520%25F0%259F%2592%25BB/Run%20Text%20as%20Shell%20Command'
+        label = 'to 3 + follow'
+        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520--focus-follows-window%25203/Run%20Text%20as%20Shell%20Command'
 
         [[leaderMode.bindings.children.children]]
         key = '#'
-        label = "to \U0001F4BB"
-        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520%25F0%259F%2592%25BB/Run%20Text%20as%20Shell%20Command'
+        label = 'to 3'
+        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%25203/Run%20Text%20as%20Shell%20Command'
+
+        [[leaderMode.bindings.children.children]]
+        key = '4'
+        label = 'to 4 + follow'
+        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520--focus-follows-window%25204/Run%20Text%20as%20Shell%20Command'
+
+        [[leaderMode.bindings.children.children]]
+        key = '$'
+        label = 'to 4'
+        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%25204/Run%20Text%20as%20Shell%20Command'
+
+        [[leaderMode.bindings.children.children]]
+        key = '5'
+        label = 'to 5 + follow'
+        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520--focus-follows-window%25205/Run%20Text%20as%20Shell%20Command'
+
+        [[leaderMode.bindings.children.children]]
+        key = '%'
+        label = 'to 5'
+        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%25205/Run%20Text%20as%20Shell%20Command'
+
+        [[leaderMode.bindings.children.children]]
+        key = '6'
+        label = 'to 6 + follow'
+        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520--focus-follows-window%25206/Run%20Text%20as%20Shell%20Command'
+
+        [[leaderMode.bindings.children.children]]
+        key = '^'
+        label = 'to 6'
+        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%25206/Run%20Text%20as%20Shell%20Command'
+
+        [[leaderMode.bindings.children.children]]
+        key = '7'
+        label = 'to 7 + follow'
+        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520--focus-follows-window%25207/Run%20Text%20as%20Shell%20Command'
+
+        [[leaderMode.bindings.children.children]]
+        key = '&'
+        label = 'to 7'
+        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%25207/Run%20Text%20as%20Shell%20Command'
+
+        [[leaderMode.bindings.children.children]]
+        key = '8'
+        label = 'to 8 + follow'
+        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520--focus-follows-window%25208/Run%20Text%20as%20Shell%20Command'
+
+        [[leaderMode.bindings.children.children]]
+        key = '*'
+        label = 'to 8'
+        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%25208/Run%20Text%20as%20Shell%20Command'
+
+        [[leaderMode.bindings.children.children]]
+        key = '9'
+        label = 'to 9 + follow'
+        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520--focus-follows-window%25209/Run%20Text%20as%20Shell%20Command'
+
+        [[leaderMode.bindings.children.children]]
+        key = '('
+        label = 'to 9'
+        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%25209/Run%20Text%20as%20Shell%20Command'
+
+        [[leaderMode.bindings.children.children]]
+        key = '0'
+        label = 'to 10 + follow'
+        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520--focus-follows-window%252010/Run%20Text%20as%20Shell%20Command'
+
+        [[leaderMode.bindings.children.children]]
+        key = ')'
+        label = 'to 10'
+        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%252010/Run%20Text%20as%20Shell%20Command'
 
     [[leaderMode.bindings.children]]
     iconPath = 'square.resize'

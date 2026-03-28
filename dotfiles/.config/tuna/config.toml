@@ -14,6 +14,10 @@ custom = []
     carbonKeyCode = 49
     carbonModifiers = 256
 
+    [hotkeys.app.leaderMode]
+    carbonKeyCode = 41
+    carbonModifiers = 4096
+
 [[leaderMode.bindings]]
 key = 's'
 url = 'tuna://run/path.%252FApplications%252FSafari.app/Open'
@@ -185,11 +189,8 @@ label = 'Aerospace'
 [settings]
 leaderModeBackspaceBehavior = 'stepBack'
 leaderModeCheatsheetDelayMS = 250
-leaderModeModifierTrigger = 'rightOption'
-leaderModeTriggerType = 'modifier'
 resultListNavigationBindings = 'vimStyle'
 themeIdentifier = 'com.brnbw.tuna.themes.default'
-typingTimeoutDuration = 2.5
 
 [[catalogSettings]]
 catalogIdentifier = 'com.brnbw.tuna.themes.default'

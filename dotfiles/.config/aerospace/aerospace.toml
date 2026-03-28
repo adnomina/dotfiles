@@ -16,13 +16,6 @@ on-focus-changed = "move-mouse window-lazy-center"
 
 automatically-unhide-macos-hidden-apps = true
 
-after-startup-command = [
-    'workspace 💬', 'layout h_accordion',
-    'workspace 🌐', 'layout tiles',
-    'workspace 💻', 'layout h_accordion',
-    'workspace 💬',
-]
-
 [key-mapping]
     preset = "qwerty"
 
@@ -49,13 +42,13 @@ after-startup-command = [
 
     alt-shift-space = "layout floating tiling"
 
-    alt-1 = "workspace 💬"
-    alt-2 = "workspace 🌐"
-    alt-3 = "workspace 💻"
+    alt-1 = "workspace 1"
+    alt-2 = "workspace 2"
+    alt-3 = "workspace 3"
 
-    alt-shift-1 = "move-node-to-workspace --focus-follows-window 💬"
-    alt-shift-2 = "move-node-to-workspace --focus-follows-window 🌐"
-    alt-shift-3 = "move-node-to-workspace --focus-follows-window 💻"
+    alt-shift-1 = "move-node-to-workspace --focus-follows-window 1"
+    alt-shift-2 = "move-node-to-workspace --focus-follows-window 2"
+    alt-shift-3 = "move-node-to-workspace --focus-follows-window 3"
 
     cmd-h = [] # Disable "hide application"
     cmd-alt-h = [] # Disable "hide others"
@@ -71,36 +64,36 @@ after-startup-command = [
     l = "resize width -50"
     enter = "mode main"
 
-# 💬 — Communication
+# 1 — Communication
 [[on-window-detected]]
 if.app-id = 'com.microsoft.teams2'
-run = ['move-node-to-workspace 💬']
+run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
-run = ['move-node-to-workspace 💬']
+run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.mail'
-run = ['move-node-to-workspace 💬']
+run = ['move-node-to-workspace 1']
 
-# 🌐 — Browser
+# 2 — Browser
 [[on-window-detected]]
 if.app-id = 'app.zen-browser.zen'
-run = ['move-node-to-workspace 🌐']
+run = ['move-node-to-workspace 2']
 
 [[on-window-detected]]
 if.app-id = 'org.mozilla.firefox'
-run = ['move-node-to-workspace 🌐']
+run = ['move-node-to-workspace 2']
 
-# 💻 — Dev
+# 3 — Dev
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
-run = ['move-node-to-workspace 💻']
+run = ['move-node-to-workspace 3']
 
 [[on-window-detected]]
 if.app-id = 'dev.zed.Zed'
-run = ['move-node-to-workspace 💻']
+run = ['move-node-to-workspace 3']
 
 # Floating
 [[on-window-detected]]

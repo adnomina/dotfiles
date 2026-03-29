@@ -37,27 +37,39 @@ label = 'Aerospace'
 
     [[leaderMode.bindings.children]]
     iconPath = 'desktopcomputer'
-    key = 'a'
+    key = '1'
     label = 'workspace 1'
     url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520workspace%25201/Run%20Text%20as%20Shell%20Command'
 
     [[leaderMode.bindings.children]]
     iconPath = 'desktopcomputer'
-    key = 's'
+    key = '2'
     label = 'workspace 2'
     url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520workspace%25202/Run%20Text%20as%20Shell%20Command'
 
     [[leaderMode.bindings.children]]
     iconPath = 'desktopcomputer'
-    key = 'd'
+    key = '3'
     label = 'workspace 3'
     url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520workspace%25203/Run%20Text%20as%20Shell%20Command'
 
     [[leaderMode.bindings.children]]
     iconPath = 'desktopcomputer'
-    key = 'f'
+    key = '4'
     label = 'workspace 4'
     url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520workspace%25204/Run%20Text%20as%20Shell%20Command'
+
+    [[leaderMode.bindings.children]]
+    iconPath = 'square.resize'
+    key = 'r'
+    label = 'mode resize'
+    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520mode%2520resize/Run%20Text%20as%20Shell%20Command'
+
+    [[leaderMode.bindings.children]]
+    iconPath = 'desktopcomputer'
+    key = 'F'
+    label = 'fullscreen'
+    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520fullscreen/Run%20Text%20as%20Shell%20Command'
 
     [[leaderMode.bindings.children]]
     iconPath = 'arrow.trianglehead.merge'
@@ -109,12 +121,6 @@ label = 'Aerospace'
         label = 'floating'
         url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520layout%2520floating%2520tiling/Run%20Text%20as%20Shell%20Command'
 
-        [[leaderMode.bindings.children.children]]
-        iconPath = 'desktopcomputer'
-        key = 'F'
-        label = 'fullscreen'
-        url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520fullscreen/Run%20Text%20as%20Shell%20Command'
-
     [[leaderMode.bindings.children]]
     iconPath = 'move.3d'
     key = 'm'
@@ -141,30 +147,24 @@ label = 'Aerospace'
         url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move%2520right/Run%20Text%20as%20Shell%20Command'
 
         [[leaderMode.bindings.children.children]]
-        key = 'a'
+        key = '1'
         label = 'move-node-to-workspace 1'
         url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520--focus-follows-window%25201/Run%20Text%20as%20Shell%20Command'
 
         [[leaderMode.bindings.children.children]]
-        key = 's'
+        key = '2'
         label = 'move-node-to-workspace 2'
         url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520--focus-follows-window%25202/Run%20Text%20as%20Shell%20Command'
 
         [[leaderMode.bindings.children.children]]
-        key = 'd'
+        key = '3'
         label = 'move-node-to-workspace 3'
         url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520--focus-follows-window%25203/Run%20Text%20as%20Shell%20Command'
 
         [[leaderMode.bindings.children.children]]
-        key = 'f'
+        key = '4'
         label = 'move-node-to-workspace 4'
         url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520--focus-follows-window%25204/Run%20Text%20as%20Shell%20Command'
-
-    [[leaderMode.bindings.children]]
-    iconPath = 'square.resize'
-    key = 'r'
-    label = 'mode resize'
-    url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520mode%2520resize/Run%20Text%20as%20Shell%20Command'
 
 [settings]
 leaderModeBackspaceBehavior = 'stepBack'

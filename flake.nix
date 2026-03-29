@@ -23,6 +23,7 @@
                 docker
                 docker-compose
                 findutils
+                fzf
                 gawk
                 gh
                 git

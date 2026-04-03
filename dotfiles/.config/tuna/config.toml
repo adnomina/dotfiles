@@ -15,22 +15,6 @@ custom = []
     carbonModifiers = 4096
 
 [[leaderMode.bindings]]
-iconPath = '/Applications/Ghostty.app'
-key = 't'
-label = 'Ghostty'
-url = 'tuna://run/path.%252FApplications%252FGhostty.app/Open'
-
-[[leaderMode.bindings]]
-key = 'b'
-label = 'Zen'
-url = 'tuna://run/TunaCore.RunningProcessesCatalog.Zen/TunaCore.CommonActionsCatalog.Open'
-
-[[leaderMode.bindings]]
-key = 'f'
-label = 'Finder'
-url = 'tuna://run/path.%252FSystem%252FLibrary%252FCoreServices%252FFinder.app/Open'
-
-[[leaderMode.bindings]]
 iconPath = '/Applications/AeroSpace.app'
 key = 'w'
 label = 'Aerospace'
@@ -67,7 +51,7 @@ label = 'Aerospace'
 
     [[leaderMode.bindings.children]]
     iconPath = 'desktopcomputer'
-    key = 'F'
+    key = 'f'
     label = 'fullscreen'
     url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520fullscreen/Run%20Text%20as%20Shell%20Command'
 
@@ -165,6 +149,35 @@ label = 'Aerospace'
         key = '4'
         label = 'move-node-to-workspace 4'
         url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520--focus-follows-window%25204/Run%20Text%20as%20Shell%20Command'
+
+[[leaderMode.bindings]]
+iconPath = '/System/Applications/Utilities/Screenshot.app'
+key = 's'
+label = 'Screenshot'
+url = 'tuna://run/Tuna.Internal.RecentObjectsCatalog.Screenshot/Open'
+
+[[leaderMode.bindings]]
+key = 'f'
+label = 'Finder'
+url = 'tuna://run/path.%252FSystem%252FLibrary%252FCoreServices%252FFinder.app/Open'
+
+[[leaderMode.bindings]]
+iconPath = '/Applications/Ghostty.app'
+key = 't'
+label = 'Terminal'
+url = 'tuna://run/path.%252FApplications%252FGhostty.app/Open'
+
+[[leaderMode.bindings]]
+iconPath = '/Applications/Nix Apps/Zed.app'
+key = 'e'
+label = 'Editor'
+url = 'tuna://run/TunaCore.AllApplicationsCatalog.Zed/Open'
+
+[[leaderMode.bindings]]
+iconPath = '/Applications/Zen.app'
+key = 'b'
+label = 'Browser'
+url = 'tuna://run/Tuna.Internal.RecentObjectsCatalog.Zen/Open'
 
 [settings]
 leaderModeBackspaceBehavior = 'stepBack'

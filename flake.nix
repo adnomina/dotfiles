@@ -16,7 +16,6 @@
             # $ nix-env -qaP | grep wget
             environment.systemPackages = with pkgs; [
                 bat
-                btop
                 colima
                 coreutils
                 claude-code
@@ -33,18 +32,15 @@
                 mise
                 neovim-nightly-overlay.packages.${stdenv.hostPlatform.system}.default
                 nil
-				nixd
+                nixd
                 obsidian
                 opencode
-                postgresql_18
                 ripgrep
                 slack
                 starship
                 stow
                 tealdeer
                 tree-sitter
-                vscode
-                yazi
                 zed-editor
             ];
 
@@ -60,14 +56,14 @@
                     "nikitabobko/tap"
                 ];
                 casks = [
-                    "nikitabobko/tap/aerospace"
-                    "zen"
-                    "karabiner-elements"
                     "beekeeper-studio"
-                    "ghostty"
-                    "firefox@developer-edition"
-                    "yaak"
                     "figma"
+                    "firefox@developer-edition"
+                    "ghostty"
+                    "karabiner-elements"
+                    "nikitabobko/tap/aerospace"
+                    "yaak"
+                    "zen"
                 ];
             };
 

@@ -1,0 +1,7 @@
+^\.git$
+^\.github$
+^\.gitignore$
+^nix$
+^README.*$
+^\.stow-local-ignore$
+settings\.local\.json$

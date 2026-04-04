@@ -1,6 +1,6 @@
-# MacBook Setup
+# dotfiles
 
-Automated setup for a fresh macOS (Apple Silicon) development environment. Packages are managed via [Nix](https://nixos.org) and [nix-darwin](https://github.com/nix-darwin/nix-darwin), with dotfiles symlinked via [GNU Stow](https://www.gnu.org/software/stow/).
+Development environment setup for macOS (Apple Silicon) and Linux. System packages are managed via [Nix](https://nixos.org) and [nix-darwin](https://github.com/nix-darwin/nix-darwin); dotfiles are symlinked via [GNU Stow](https://www.gnu.org/software/stow/).
 
 ## Quick Start
 
@@ -10,23 +10,46 @@ Automated setup for a fresh macOS (Apple Silicon) development environment. Packa
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 ```
 
-**2. Apply the Nix configuration** (installs all packages, symlinks dotfiles, and sets Fish as default shell):
+**2. Clone the repo:**
 
 ```bash
-git clone https://github.com/adnomina/macbook-setup.git
-cd macbook-setup
-sudo darwin-rebuild switch --flake .
+git clone https://github.com/adnomina/dotfiles.git
+cd dotfiles
 ```
 
-**3. Symlink dotfiles:**
+**3. Apply the Nix configuration** (installs all packages and sets Fish as default shell):
 
 ```bash
-stow dotfiles
+sudo darwin-rebuild switch --flake ./nix
+```
+
+**4. Symlink dotfiles:**
+
+```bash
+stow .
+```
+
+## Structure
+
+```
+dotfiles/
+├── .claude/        # Claude Code config, statusline, plugins
+├── .config/
+│   ├── aerospace/  # AeroSpace tiling window manager
+│   ├── fish/       # Fish shell config and aliases
+│   ├── ghostty/    # Ghostty terminal + Catppuccin theme
+│   ├── karabiner/  # Karabiner-Elements: caps lock → ctrl
+│   ├── nvim/       # Neovim (Lua, native vim.pack + vim.lsp)
+│   ├── starship.toml  # Starship prompt (Catppuccin Mocha)
+│   ├── tuna/       # Tuna launcher: leader mode bindings
+│   ├── wezterm/    # WezTerm terminal emulator
+│   └── zed/        # Zed editor settings + keybindings
+└── nix/            # Nix flake (system packages + macOS defaults)
 ```
 
 ## What Gets Installed
 
-Packages are declared in `flake.nix`. Nix manages most software; Homebrew is used only for packages unavailable in nixpkgs.
+Packages are declared in `nix/flake.nix`. Nix manages most software; Homebrew is used only for packages unavailable in nixpkgs.
 
 ### Nix Packages
 
@@ -73,7 +96,7 @@ Packages are declared in `flake.nix`. Nix manages most software; Homebrew is use
 | `yaak` | API client |
 | `zen` | Zen browser |
 
-### System Defaults
+### System Defaults (macOS)
 
 Applied automatically by nix-darwin:
 
@@ -86,35 +109,17 @@ Applied automatically by nix-darwin:
 
 ## Updating
 
-To update all nix inputs and rebuild, run the following two commands in the root of this repository.
-
 ```bash
+cd ~/dotfiles/nix
 nix flake update
 darwin-rebuild switch --flake .
 ```
 
 ## Dotfiles
 
-Dotfiles are organized as [GNU Stow](https://www.gnu.org/software/stow/) packages under `dotfiles/` and symlinked into `$HOME`:
-
-```
-dotfiles/
-├── .claude/        # Claude Code config, statusline, plugins
-├── .config/
-│   ├── aerospace/  # AeroSpace tiling window manager
-│   ├── fish/       # Fish shell config and aliases
-│   ├── ghostty/    # Ghostty terminal + Catppuccin theme
-│   ├── karabiner/  # Karabiner-Elements: caps lock → ctrl
-│   ├── nvim/       # Neovim (Lua, native vim.pack + vim.lsp)
-│   ├── starship.toml  # Starship prompt (Catppuccin Mocha)
-│   ├── tuna/       # Tuna launcher: leader mode bindings
-│   ├── wezterm/    # WezTerm terminal emulator
-│   └── zed/        # Zed editor settings + keybindings
-```
-
 ### Fish Shell
 
-Aliases and integrations in `config.fish`:
+Aliases and integrations in `.config/fish/config.fish`:
 
 | Alias | Command |
 |-------|---------|
@@ -230,7 +235,7 @@ Leader key: tap right Option (`⌥`).
 
 ### Claude Code
 
-Config in `dotfiles/.claude/`:
+Config in `.claude/`:
 
 - Custom status line via `~/.claude/statusline.sh`
 - Enabled plugins: `skill-creator`, `figma`, `typescript-lsp`

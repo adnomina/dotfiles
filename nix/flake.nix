@@ -63,6 +63,7 @@
                     "firefox@developer-edition"
                     "ghostty"
                     "karabiner-elements"
+                    "lm-studio"
                     "nikitabobko/tap/aerospace"
                     "yaak"
                     "zen"

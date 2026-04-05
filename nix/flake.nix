@@ -41,6 +41,7 @@
                 starship
                 stow
                 tealdeer
+                tmux
                 tree-sitter
                 zed-editor
             ];

@@ -51,7 +51,7 @@
                 enable = true;
                 onActivation = {
                     autoUpdate = true;
-		    upgrade = true;
+                upgrade = true;
                     cleanup = "zap";
                 };
                 taps = [
@@ -59,6 +59,7 @@
                 ];
                 casks = [
                     "beekeeper-studio"
+                    "cursor"
                     "figma"
                     "firefox@developer-edition"
                     "ghostty"
@@ -90,12 +91,12 @@
 
             users.users.nicolas.shell = pkgs.fish;
 
-    	    system.defaults = {
-          		dock.autohide = true;
-          		finder.FXPreferredViewStyle = "clmv";
-          		loginwindow.GuestEnabled = false;
-          		NSGlobalDomain.AppleInterfaceStyle = "Dark";
-    	    };
+            system.defaults = {
+                dock.autohide = true;
+                finder.FXPreferredViewStyle = "clmv";
+                loginwindow.GuestEnabled = false;
+                NSGlobalDomain.AppleInterfaceStyle = "Dark";
+            };
 
             fonts.packages = [ pkgs.nerd-fonts.jetbrains-mono ];
 

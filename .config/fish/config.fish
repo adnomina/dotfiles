@@ -27,3 +27,5 @@ end
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /Users/nicolas/.lmstudio/bin
 # End of LM Studio CLI section
+
+eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"

@@ -14,6 +14,7 @@
             # List packages installed in system profile. To search by name, run:
             # $ nix-env -qaP | grep wget
             environment.systemPackages = with pkgs; [
+                bash-language-server
                 bat
                 colima
                 coreutils
@@ -29,19 +30,27 @@
                 git
                 gnused
                 gnupg
+                graphql-lsp
                 jq
+                lua-language-server
                 neovim
                 nil
                 nixd
                 obsidian
                 opencode
+                prisma-language-server
                 ripgrep
                 slack
                 starship
                 stow
+                tailwindcss-language-server
                 tealdeer
                 tmux
                 tree-sitter
+                vscode-css-language-server
+                vscode-eslint-language-server
+                vscode-html-language-server
+                vscode-json-language-server
                 vtsls
                 zed-editor
             ];

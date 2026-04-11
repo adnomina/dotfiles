@@ -5,11 +5,11 @@ vim.pack.add({
     "https://github.com/lewis6991/gitsigns.nvim",
     "https://github.com/neovim/nvim-lspconfig",
     "https://github.com/nvim-tree/nvim-web-devicons",
-    {
-        src = "https://github.com/nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate"
-    },
+    "https://github.com/nvim-treesitter/nvim-treesitter",
 })
+
+vim.cmd.packadd("nvim.undotree")
+vim.cmd.packadd("nvim.difftool")
 
 require("catppuccin").setup({
     flavour = "mocha",

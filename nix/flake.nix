@@ -47,10 +47,7 @@
                 tealdeer
                 tmux
                 tree-sitter
-                vscode-css-language-server
-                vscode-eslint-language-server
-                vscode-html-language-server
-                vscode-json-language-server
+                vscode-langservers-extracted
                 vtsls
                 zed-editor
             ];

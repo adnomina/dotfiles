@@ -42,6 +42,7 @@
                 tealdeer
                 tmux
                 tree-sitter
+                vtsls
                 zed-editor
             ];
 

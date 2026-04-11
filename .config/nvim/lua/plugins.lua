@@ -1,9 +1,10 @@
-vim.pack.add({ { src = "https://github.com/mason-org/mason.nvim" },
-    { src = "https://github.com/catppuccin/nvim" },
-    { src = "https://github.com/folke/which-key.nvim" },
-    { src = "https://github.com/nvim-tree/nvim-web-devicons" },
-{ src = "https://github.com/dmtrKovalenko/fff.nvim" },
+vim.pack.add({
+    "https://github.com/catppuccin/nvim",
+    "https://github.com/dmtrKovalenko/fff.nvim",
+    "https://github.com/folke/which-key.nvim",
     "https://github.com/lewis6991/gitsigns.nvim",
+    "https://github.com/mason-org/mason.nvim",
+    "https://github.com/nvim-tree/nvim-web-devicons",
     {
         src = "https://github.com/nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate"

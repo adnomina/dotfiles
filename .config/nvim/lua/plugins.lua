@@ -3,7 +3,6 @@ vim.pack.add({ { src = "https://github.com/mason-org/mason.nvim" },
     { src = "https://github.com/folke/which-key.nvim" },
     { src = "https://github.com/nvim-tree/nvim-web-devicons" },
 { src = "https://github.com/dmtrKovalenko/fff.nvim" },
-    "https://github.com/neovim/nvim-lspconfig",
     "https://github.com/lewis6991/gitsigns.nvim",
     {
         src = "https://github.com/nvim-treesitter/nvim-treesitter",

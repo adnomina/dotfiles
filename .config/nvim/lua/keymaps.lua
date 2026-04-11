@@ -58,3 +58,5 @@ keymap.set(
     function() require("which-key").show({ keys = "<c-w>", loop = true }) end,
     { desc = "Window hydra mode (which-key)" }
 )
+
+keymap.set("n", "<leader>U", "<cmd>Undotree<CR>", { desc = "Undo Tree" })

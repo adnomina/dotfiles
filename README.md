@@ -141,7 +141,6 @@ Uses native `vim.pack` for plugin management and built-in `vim.lsp` (no plugin w
 | Plugin | Purpose |
 |--------|---------|
 | `mason.nvim` | LSP/tool installer |
-| `blink.cmp` | Completion engine |
 | `catppuccin/nvim` | Color scheme |
 | `which-key.nvim` | Keybinding hints |
 | `nvim-web-devicons` | File icons |
@@ -150,6 +149,8 @@ Uses native `vim.pack` for plugin management and built-in `vim.lsp` (no plugin w
 | `nvim-lspconfig` | LSP configs |
 | `gitsigns.nvim` | Git hunk decorations |
 | `nvim-treesitter` | Syntax parsing |
+
+Completion uses the native `autocomplete` option (0.12 built-in, no plugin).
 
 **LSP servers** (managed via Mason):
 
@@ -162,12 +163,15 @@ Uses native `vim.pack` for plugin management and built-in `vim.lsp` (no plugin w
 | `gd` | Go to definition |
 | `gr` | References |
 | `gI` | Go to implementation |
-| `gy` | Go to type definition |
+| `grt` | Go to type definition (0.12 built-in) |
+| `grx` | Run code lens (0.12 built-in) |
 | `gD` | Go to declaration |
 | `K` | Hover docs |
 | `gK` | Signature help |
 | `<leader>ca` | Code action |
 | `<leader>cr` | Rename |
+| `<leader>cD` | Workspace diagnostics |
+| `<leader>U` | Open undo tree |
 
 **Git hunk keymaps** (gitsigns):
 

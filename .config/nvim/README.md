@@ -9,7 +9,6 @@ A minimal Neovim 0.12 setup using native plugin management (`vim.pack`) and buil
 | Plugin | Purpose | Key Features |
 |--------|---------|--------------|
 | **mason.nvim** | LSP/tool installer | Manages language server installation |
-| **blink.cmp** | Completion engine | Rust-based fuzzy completion, LSP/buffer sources, documentation preview |
 | **catppuccin/nvim** | Color theme | Mocha flavor with true color support |
 | **which-key.nvim** | Keybinding helper | Displays available keybindings and descriptions |
 | **nvim-web-devicons** | File icons | Icons for different file types in explorer and statusline |
@@ -44,6 +43,8 @@ A minimal Neovim 0.12 setup using native plugin management (`vim.pack`) and buil
 - **No mouse**: Mouse support disabled
 - **Incremental command**: Live command preview without split
 - **Update time**: 300ms (for CursorHold events)
+- **Borders**: `winborder = rounded` applied globally; `pumborder = rounded` for completion popup; `pummaxwidth = 80`
+- **UI2**: Experimental redesigned message/cmdline UI enabled (eliminates "Press ENTER" prompts)
 
 ### File Explorer (netrw)
 - **Tree view**: List style with tree hierarchy
@@ -61,6 +62,7 @@ A minimal Neovim 0.12 setup using native plugin management (`vim.pack`) and buil
 | `<Leader>f` | Normal | Format buffer (LSP) |
 | `<Leader>d` | Normal | Show diagnostics |
 | `<Leader>u` | Normal | Update plugins |
+| `<Leader>U` | Normal | Open undo tree |
 | `<Leader>e` | Normal | Open file explorer |
 | `ff` | Normal | Find files (fff.nvim) |
 | `<C-u>` | Normal | Page up (centered) |
@@ -75,12 +77,14 @@ A minimal Neovim 0.12 setup using native plugin management (`vim.pack`) and buil
 | `gd` | Normal | Go to definition |
 | `gr` | Normal | References |
 | `gI` | Normal | Go to implementation |
-| `gy` | Normal | Go to type definition |
+| `grt` | Normal | Go to type definition (0.12 built-in) |
+| `grx` | Normal | Run code lens (0.12 built-in) |
 | `gD` | Normal | Go to declaration |
 | `K` | Normal | Hover documentation |
 | `gK` | Normal | Signature help |
 | `<leader>ca` | Normal, Visual | Code action |
 | `<leader>cr` | Normal | Rename symbol |
+| `<leader>cD` | Normal | Workspace diagnostics |
 
 ### Git (gitsigns, buffer-local)
 
@@ -139,13 +143,10 @@ Configured via native `vim.lsp.enable()` and `vim.lsp.config()`.
 
 Auto-installed on new machines: `javascript`, `typescript`, `tsx`, `css`, `html`, `json`, `graphql`, `lua`, `markdown`, `markdown_inline`
 
-### Completion (blink.cmp)
-- Fuzzy matching with Rust implementation for performance
-- LSP, path, and buffer sources
-- Automatic documentation preview (200ms delay)
-- Tab to accept completions or expand snippets
-- `<C-b>` / `<C-f>` to scroll documentation
-- `<C-k>` to show function signatures
+### Completion (native)
+- Native `autocomplete` option (0.12 built-in, no plugin required)
+- Fuzzy matching (`fuzzy`), documentation popup (`popup`), results sorted by distance to cursor (`nearest`)
+- LSP completions via `completionItem/resolve` for documentation side window
 
 ### Git (gitsigns.nvim)
 - Custom Nerd Font signs: `▎` for add/change/untracked, `` for delete

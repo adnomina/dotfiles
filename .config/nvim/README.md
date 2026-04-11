@@ -13,7 +13,6 @@ A minimal Neovim 0.12 setup using native plugin management (`vim.pack`) and buil
 | **nvim-web-devicons** | File icons | Icons for different file types in explorer and statusline |
 | **fff.nvim** | Fuzzy file finder | Fast file search with fuzzy matching |
 | **nvim-lspconfig** | LSP configurations | Language server protocol client configs |
-| **gitsigns.nvim** | Git integration | Git signs in the sign column, hunk navigation and staging |
 | **nvim-treesitter** | Syntax highlighting | Tree-sitter based parsing and highlighting |
 
 ## Editor Settings
@@ -88,24 +87,6 @@ A minimal Neovim 0.12 setup using native plugin management (`vim.pack`) and buil
 | `grx` | Normal | Run code lens |
 | `gO` | Normal | Document symbols |
 | `<C-s>` | Insert | Signature help |
-
-### Git (gitsigns, buffer-local)
-
-| Keybinding | Mode | Action |
-|------------|------|--------|
-| `]h` / `[h` | Normal | Next/prev hunk |
-| `]H` / `[H` | Normal | Last/first hunk |
-| `<leader>ghs` | Normal, Visual | Stage hunk |
-| `<leader>ghr` | Normal, Visual | Reset hunk |
-| `<leader>ghS` | Normal | Stage buffer |
-| `<leader>ghu` | Normal | Undo stage hunk |
-| `<leader>ghR` | Normal | Reset buffer |
-| `<leader>ghp` | Normal | Preview hunk inline |
-| `<leader>ghb` | Normal | Blame line (full) |
-| `<leader>ghB` | Normal | Blame buffer |
-| `<leader>ghd` | Normal | Diff this |
-| `<leader>ghD` | Normal | Diff this (against last commit) |
-| `ih` | Operator, Visual | Select hunk (text object) |
 
 **Leader key**: Spacebar (`<Space>`)
 

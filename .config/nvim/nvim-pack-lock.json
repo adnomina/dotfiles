@@ -4,10 +4,6 @@
       "rev": "ea1f9802d7879345f02bef72bcadecd7252b8add",
       "src": "https://github.com/dmtrKovalenko/fff.nvim"
     },
-    "gitsigns.nvim": {
-      "rev": "8d82c240f190fc33723d48c308ccc1ed8baad69d",
-      "src": "https://github.com/lewis6991/gitsigns.nvim"
-    },
     "nvim": {
       "rev": "426dbebe06b5c69fd846ceb17b42e12f890aedf1",
       "src": "https://github.com/catppuccin/nvim"

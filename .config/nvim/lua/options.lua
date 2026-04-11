@@ -30,6 +30,7 @@ opt.clipboard = "unnamedplus"
 opt.listchars = "tab:| ,trail:-,nbsp:+"
 opt.updatetime = 300
 opt.mouse = ""
+opt.confirm = true
 
 vim.g.mapleader = " "
 

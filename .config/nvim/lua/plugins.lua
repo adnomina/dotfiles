@@ -4,7 +4,6 @@ vim.pack.add({
     "https://github.com/folke/which-key.nvim",
     "https://github.com/neovim/nvim-lspconfig",
     "https://github.com/nvim-tree/nvim-web-devicons",
-    "https://github.com/nvim-treesitter/nvim-treesitter",
 })
 
 vim.cmd.packadd("nvim.undotree")

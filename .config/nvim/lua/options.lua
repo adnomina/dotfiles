@@ -53,3 +53,4 @@ vim.g.fff = {
 
 vim.cmd.filetype("plugin indent on")
 vim.cmd.colorscheme("catppuccin")
+vim.cmd("syntax off")

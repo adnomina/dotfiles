@@ -13,7 +13,6 @@ A minimal Neovim 0.12 setup using native plugin management (`vim.pack`) and buil
 | **nvim-web-devicons** | File icons | Icons for different file types in explorer and statusline |
 | **fff.nvim** | Fuzzy file finder | Fast file search with fuzzy matching |
 | **nvim-lspconfig** | LSP configurations | Language server protocol client configs |
-| **nvim-treesitter** | Syntax highlighting | Tree-sitter based parsing and highlighting |
 
 ## Editor Settings
 
@@ -122,10 +121,6 @@ Configured via native `vim.lsp.enable()` and `vim.lsp.config()`.
 - Virtual text prefix `●`, spacing 4, source shown when multiple servers
 - Severity-sorted with Nerd Font icons in the sign column
 - Floating window on `CursorHold` (auto-closes on move/insert)
-
-### Treesitter Languages
-
-Auto-installed on new machines: `javascript`, `typescript`, `tsx`, `css`, `html`, `json`, `graphql`, `lua`, `markdown`, `markdown_inline`
 
 ### Completion (native)
 - Native `autocomplete` option (0.12 built-in, no plugin required)

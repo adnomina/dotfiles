@@ -6,10 +6,9 @@
         nix-darwin.url = "github:nix-darwin/nix-darwin/master";
         nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
         nix-homebrew.url = "github:zhaofengli/nix-homebrew";
-        neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     };
 
-    outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, neovim-nightly-overlay }:
+    outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
     let
         configuration = { pkgs, ... }: {
             # List packages installed in system profile. To search by name, run:
@@ -31,7 +30,7 @@
                 gnused
                 gnupg
                 jq
-                neovim-nightly-overlay.packages.${stdenv.hostPlatform.system}.default
+                neovim
                 nil
                 nixd
                 obsidian

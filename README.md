@@ -69,7 +69,7 @@ Packages are declared in `nix/flake.nix`. Nix manages most software; Homebrew is
 | `gnused` | GNU sed |
 | `jq` | JSON processor |
 | `mise` | Polyglot runtime version manager |
-| `neovim` (nightly) | Text editor (via [neovim-nightly-overlay](https://github.com/nix-community/neovim-nightly-overlay)) |
+| `neovim` | Text editor |
 | `nerd-fonts.jetbrains-mono` | JetBrains Mono Nerd Font |
 | `nil` / `nixd` | Nix language servers |
 | `obsidian` | Markdown note-taking |

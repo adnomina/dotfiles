@@ -21,11 +21,3 @@ autocmd("CursorHold", {
         })
     end,
 })
-
-autocmd("PackChanged", {
-    callback = function(event)
-        if event.data.updated then
-            require("fff.download").download_or_build_binary()
-        end
-    end,
-})

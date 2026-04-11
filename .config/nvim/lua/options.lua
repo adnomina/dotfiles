@@ -44,13 +44,6 @@ vim.g.netrw_browse_split = 0
 -- Open splits to the right
 vim.g.netrw_altv = 1
 
-vim.g.fff = {
-    lazy_sync = true,
-    debug = {
-        show_scores = true,
-    },
-}
-
 vim.cmd.filetype("plugin indent on")
 vim.cmd.colorscheme("catppuccin")
 vim.cmd("syntax off")

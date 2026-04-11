@@ -1,9 +1,5 @@
 {
   "plugins": {
-    "fff.nvim": {
-      "rev": "ea1f9802d7879345f02bef72bcadecd7252b8add",
-      "src": "https://github.com/dmtrKovalenko/fff.nvim"
-    },
     "nvim": {
       "rev": "426dbebe06b5c69fd846ceb17b42e12f890aedf1",
       "src": "https://github.com/catppuccin/nvim"

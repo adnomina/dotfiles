@@ -11,7 +11,6 @@ A minimal Neovim 0.12 setup using native plugin management (`vim.pack`) and buil
 | **catppuccin/nvim** | Color theme | Mocha flavor with true color support |
 | **which-key.nvim** | Keybinding helper | Displays available keybindings and descriptions |
 | **nvim-web-devicons** | File icons | Icons for different file types in explorer and statusline |
-| **fff.nvim** | Fuzzy file finder | Fast file search with fuzzy matching |
 | **nvim-lspconfig** | LSP configurations | Language server protocol client configs |
 
 ## Editor Settings
@@ -55,16 +54,7 @@ A minimal Neovim 0.12 setup using native plugin management (`vim.pack`) and buil
 | Keybinding | Mode | Action |
 |------------|------|--------|
 | `jk` | Insert | Exit insert mode |
-| `<Leader>f` | Normal | Format buffer (LSP) |
-| `<Leader>d` | Normal | Show diagnostics |
-| `<Leader>u` | Normal | Update plugins |
-| `<Leader>U` | Normal | Open undo tree |
-| `<Leader>e` | Normal | Open file explorer |
-| `ff` | Normal | Find files (fff.nvim) |
-| `<C-u>` | Normal | Page up (centered) |
-| `<C-d>` | Normal | Page down (centered) |
-| `<leader>?` | Normal | Show buffer keymaps (which-key) |
-| `<C-w><Space>` | Normal | Window hydra mode (which-key) |
+| `<C-w>f` | Normal | Format buffer (LSP) |
 
 ### LSP (buffer-local, set on attach)
 
@@ -72,9 +62,6 @@ A minimal Neovim 0.12 setup using native plugin management (`vim.pack`) and buil
 |------------|------|--------|
 | `gd` | Normal | Go to definition |
 | `gD` | Normal | Go to declaration |
-| `K` | Normal | Hover documentation |
-| `gK` | Normal | Signature help |
-| `<leader>cD` | Normal | Workspace diagnostics |
 
 **0.12 built-in defaults (no explicit mapping needed):**
 
@@ -93,7 +80,7 @@ A minimal Neovim 0.12 setup using native plugin management (`vim.pack`) and buil
 
 ### LSP
 
-Configured via native `vim.lsp.enable()` and `vim.lsp.config()`.
+Installed via Nix and configured via native `vim.lsp.enable()` and `vim.lsp.config()`.
 
 **Global capabilities** (all servers): workspace file operation notifications (`didRename`, `willRename`)
 
@@ -126,22 +113,6 @@ Configured via native `vim.lsp.enable()` and `vim.lsp.config()`.
 - Native `autocomplete` option (0.12 built-in, no plugin required)
 - Fuzzy matching (`fuzzy`), documentation popup (`popup`), results sorted by distance to cursor (`nearest`)
 - LSP completions via `completionItem/resolve` for documentation side window
-
-### Git (gitsigns.nvim)
-- Custom Nerd Font signs: `▎` for add/change/untracked, `` for delete
-- Staged changes shown with separate sign set
-- Hunk navigation respects diff mode (`]c`/`[c`) vs normal mode
-- `ih` text object for selecting hunks in operator/visual mode
-
-### Keybinding Helper (which-key.nvim)
-- Helix preset style
-- Shows descriptions for all mapped commands with leader key groups labeled
-- `<leader>?` to show all buffer-local keymaps
-- `<C-w><Space>` for interactive window hydra mode
-
-### fff.nvim
-- Lazy sync mode enabled for performance
-- Binary auto-downloads on plugin updates
 
 ### Visual Enhancements
 - **Yank highlighting**: Highlighted text flashes for 150ms when copied

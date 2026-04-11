@@ -1,6 +1,5 @@
 vim.pack.add({
     "https://github.com/catppuccin/nvim",
-    "https://github.com/dmtrKovalenko/fff.nvim",
     "https://github.com/folke/which-key.nvim",
     "https://github.com/neovim/nvim-lspconfig",
     "https://github.com/nvim-tree/nvim-web-devicons",

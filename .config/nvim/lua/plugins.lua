@@ -25,6 +25,7 @@ require("catppuccin").setup({
 require("which-key").setup({
     preset = "classic",
     spec = {
+        { "<Space>f", desc = "Find file" },
         {
             mode = { "n", "x" },
             { "gO",  desc = "Document Symbols" },

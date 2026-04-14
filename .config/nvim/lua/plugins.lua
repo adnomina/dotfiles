@@ -11,6 +11,7 @@ require("tree-sitter-manager").setup({
         "bash", "css", "graphql", "html", "javascript",
         "json", "lua", "nix", "toml", "tsx", "typescript", "yaml",
     },
+    auto_install = true,
 })
 
 vim.cmd.packadd("nvim.undotree")

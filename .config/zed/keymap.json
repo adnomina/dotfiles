@@ -20,4 +20,16 @@
             "ctrl-w f": "editor::Format",
         },
     },
+    {
+        "context": "Editor",
+        "unbind": {
+            "ctrl-w": [
+                "editor::DeleteToPreviousWordStart",
+                {
+                    "ignore_newlines": false,
+                    "ignore_brackets": false
+                }
+            ]
+        }
+    }
 ]

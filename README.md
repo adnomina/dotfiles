@@ -71,6 +71,7 @@ Packages are declared in `nix/flake.nix`. Nix manages most software; Homebrew is
 | `mise` | Polyglot runtime version manager |
 | `neovim` | Text editor |
 | `nerd-fonts.jetbrains-mono` | JetBrains Mono Nerd Font |
+| `nerd-fonts.monaspace` | Monaspace Nerd Font |
 | `nil` / `nixd` | Nix language servers |
 | `obsidian` | Markdown note-taking |
 | `opencode` | OpenCode CLI |

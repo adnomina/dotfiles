@@ -23,7 +23,7 @@ config = {
     window_frame = {
         active_titlebar_bg = "#1E1E2E"
     },
-    font = wezterm.font "JetBrains Mono SemiBold",
+    font = wezterm.font "Monaspace Neon NF",
     font_size = 16,
     window_decorations = "RESIZE",
     enable_tab_bar = false,

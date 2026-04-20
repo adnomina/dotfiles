@@ -106,7 +106,10 @@
                 NSGlobalDomain.AppleInterfaceStyle = "Dark";
             };
 
-            fonts.packages = [ pkgs.nerd-fonts.jetbrains-mono ];
+            fonts.packages = [
+                pkgs.nerd-fonts.jetbrains-mono
+                pkgs.nerd-fonts.monaspace
+            ];
 
             system.activationScripts.postActivation.text = ''
                 echo "Run this from the repo root to symlink dotfiles:"

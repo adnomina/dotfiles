@@ -4,7 +4,7 @@
     "icon_theme": "Colored Zed Icons Theme Dark",
 
     // Typography
-    "buffer_font_family": "JetBrainsMono Nerd Font",
+    "buffer_font_family": "Monaspace Neon NF",
     "buffer_font_size": 16,
 
     // Docks, Panels, and Bars
@@ -52,6 +52,7 @@
     },
     "bottom_dock_layout": "full",
     "terminal": {
+        "font_family": "Monaspace Neon NF",
         "keep_selection_on_copy": false,
         "copy_on_select": true,
         "option_as_meta": true,

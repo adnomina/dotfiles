@@ -16,16 +16,8 @@
     "buffer_font_size": 16,
 
     // Docks, Panels, and Bars
-    "title_bar": {
-        "show_branch_icon": true,
-    },
     "tab_bar": {
         "show": false,
-    },
-    "tabs": {
-        "show_diagnostics": "all",
-        "file_icons": true,
-        "git_status": true,
     },
     "toolbar": {
         "quick_actions": false,
@@ -39,15 +31,10 @@
     "collaboration_panel": {
         "button": false,
     },
-    "notification_panel": {
-        "button": false,
-    },
     "git_panel": {
         "dock": "right",
     },
     "agent": {
-        "dock": "left",
-        "default_profile": "write",
         "inline_assistant_model": {
             "provider": "copilot_chat",
             "model": "claude-sonnet-4.6",
@@ -95,7 +82,6 @@
     },
     "close_on_file_delete": true,
     "relative_line_numbers": "enabled",
-    "document_symbols": "on",
     "colorize_brackets": true,
     "minimap": {
         "show": "never",
@@ -108,7 +94,7 @@
     "indent_guides": {
         "coloring": "indent_aware",
     },
-    "soft_wrap": "preferred_line_length",
+    "soft_wrap": "bounded",
     "hover_popover_delay": 250,
     "tab_size": 4,
 
@@ -164,7 +150,6 @@
             "api_url": "http://localhost:1234/v1"
         }
     },
-    "agent_ui_font_size": 16.0,
 
     // Miscellaneous
     "use_system_window_tabs": true,

@@ -3,15 +3,8 @@ vim.pack.add({
     "https://github.com/folke/which-key.nvim",
     "https://github.com/neovim/nvim-lspconfig",
     "https://github.com/nvim-tree/nvim-web-devicons",
-    "https://github.com/romus204/tree-sitter-manager.nvim",
-})
-
-require("tree-sitter-manager").setup({
-    ensure_installed = {
-        "bash", "css", "graphql", "html", "javascript",
-        "json", "lua", "nix", "toml", "tsx", "typescript", "yaml",
-    },
-    auto_install = true,
+    "https://github.com/nvim-treesitter/nvim-treesitter",
+    "https://github.com/mason-org/mason.nvim"
 })
 
 vim.cmd.packadd("nvim.undotree")
@@ -40,3 +33,29 @@ require("which-key").setup({
         },
     },
 })
+
+require("nvim-treesitter").install {
+    "bash",
+    "css",
+    "diff",
+    "dockerfile",
+    "editorconfig",
+    "ecma",
+    "fish",
+    "graphql",
+    "html",
+    "javascript",
+    "json",
+    "json5",
+    "jsx",
+    "lua",
+    "nix",
+    "prisma",
+    "sql",
+    "toml",
+    "tsx",
+    "typescript",
+    "yaml",
+}
+
+require("mason").setup()

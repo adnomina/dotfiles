@@ -22,7 +22,12 @@ autocmd("CursorHold", {
     end,
 })
 
-autocmd('FileType', {
-    pattern = '*',
+autocmd("FileType", {
+    pattern = "*",
     callback = function() vim.treesitter.start() end,
+})
+
+autocmd("FileType", {
+    pattern = "help",
+    command = "wincmd L",
 })

@@ -21,3 +21,8 @@ autocmd("CursorHold", {
         })
     end,
 })
+
+autocmd('FileType', {
+    pattern = '*',
+    callback = function() vim.treesitter.start() end,
+})

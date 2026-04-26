@@ -15,7 +15,7 @@ palette = "catppuccin_macchiato"
 
 [username]
 show_always = true
-format = "[  $user](green)"
+format = "[ $user](green)"
 
 [directory]
 style = "sapphire"

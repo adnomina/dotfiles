@@ -23,7 +23,12 @@ autocmd("CursorHold", {
 })
 
 autocmd("FileType", {
-    pattern = "*",
+    pattern = {
+        "bash", "css", "diff", "dockerfile", "editorconfig",
+        "fish", "graphql", "html", "javascript", "javascriptreact",
+        "json", "json5", "lua", "nix", "prisma", "sql", "toml",
+        "typescript", "typescriptreact", "yaml",
+    },
     callback = function() vim.treesitter.start() end,
 })
 

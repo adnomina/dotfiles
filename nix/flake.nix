@@ -59,7 +59,6 @@
                 casks = [
                     "beekeeper-studio"
                     "docker/tap/sbx"
-                    "figma"
                     "firefox@developer-edition"
                     "ghostty"
                     "karabiner-elements"

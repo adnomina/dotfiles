@@ -15,11 +15,8 @@
             # $ nix-env -qaP | grep wget
             environment.systemPackages = with pkgs; [
                 bat
-                colima
                 coreutils
                 claude-code
-                docker
-                docker-compose
                 fd
                 findutils
                 fnm
@@ -54,11 +51,10 @@
                 };
                 taps = [
                     "nikitabobko/tap"
-                    "docker/tap"
                 ];
                 casks = [
                     "beekeeper-studio"
-                    "docker/tap/sbx"
+                    "docker"
                     "firefox@developer-edition"
                     "ghostty"
                     "karabiner-elements"

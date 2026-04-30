@@ -62,7 +62,6 @@
                     "nikitabobko/tap/aerospace"
                     "yaak"
                     "zed"
-                    "zen"
                 ];
             };
 

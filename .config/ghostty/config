@@ -1,7 +1,7 @@
 theme = dark:Catppuccin Macchiato,light:Catppuccin Latte
 
 font-family = Monaspace Neon NF
-font-size = 16
+font-size = 18
 font-thicken = true
 
 window-save-state = always

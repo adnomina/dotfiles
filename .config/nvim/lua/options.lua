@@ -55,8 +55,8 @@ opt.undofile = true
 
 -- Enable the built-in autocomplete (ins-completion) feature
 opt.autocomplete = true
--- Configure completion menu behaviour: fuzzy matching, popup style, no auto-insert
-opt.completeopt = "fuzzy,menu,menuone,popup"
+-- Configure completion menu behaviour
+opt.completeopt = "menu,menuone,noselect,popup"
 -- Use rounded borders for floating windows
 opt.winborder = "rounded"
 -- Use rounded borders for the completion popup menu

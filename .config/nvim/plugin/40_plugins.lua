@@ -85,6 +85,11 @@ now_if_args(function()
     })
 end)
 
+now_if_args(function()
+    add({ "https://github.com/mason-org/mason.nvim" })
+    require("mason").setup()
+end)
+
 -- Color theme ================================================================
 
 now_if_args(function()

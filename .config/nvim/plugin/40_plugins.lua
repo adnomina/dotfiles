@@ -58,27 +58,31 @@ end)
 -- Language servers ===========================================================
 
 now_if_args(function()
-  add({ 'https://github.com/neovim/nvim-lspconfig' })
+    add({ 'https://github.com/neovim/nvim-lspconfig' })
 
-  -- Use `:h vim.lsp.enable()` to automatically enable language server based on
-  -- the rules provided by 'nvim-lspconfig'.
-  -- Use `:h vim.lsp.config()` or 'after/lsp/' directory to configure servers.
-  vim.lsp.enable({
-    "bashls",
-    "cssls",
-    "docker-language-server",
-    "eslint",
-    "fish_lsp",
-    "graphql",
-    "html",
-    "jsonls",
-    "lua_ls",
-    "nixd",
-    "postgres_lsp",
-    "prismals",
-    "tailwindcss",
-    "vtsls",
-  })
+    vim.lsp.config("*", {
+        capabilities = vim.lsp.protocol.make_client_capabilities(),
+    })
+
+    -- Use `:h vim.lsp.enable()` to automatically enable language server based on
+    -- the rules provided by 'nvim-lspconfig'.
+    -- Use `:h vim.lsp.config()` or 'after/lsp/' directory to configure servers.
+    vim.lsp.enable({
+        "bashls",
+        "cssls",
+        "docker-language-server",
+        "eslint",
+        "fish_lsp",
+        "graphql",
+        "html",
+        "jsonls",
+        "lua_ls",
+        "nixd",
+        "postgres_lsp",
+        "prismals",
+        "tailwindcss",
+        "vtsls",
+    })
 end)
 
 -- Color theme ================================================================
@@ -88,9 +92,3 @@ now_if_args(function()
 
   vim.cmd("color catppuccin-macchiato")
 end)
-
--- File explorer with column view and preview
-require("mini.files").setup({ windows = { preview = true } })
-
--- Fuzzy finder for files, grep, buffers, help, and more
-require("mini.pick").setup()

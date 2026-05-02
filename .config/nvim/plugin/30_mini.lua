@@ -10,21 +10,21 @@ local now, now_if_args, later = Config.now, Config.now_if_args, Config.later
 -- Icon provider. Usually no need to use manually. It is used by plugins like
 -- 'mini.pick', 'mini.files', 'mini.statusline', and others.
 now(function()
-  -- Set up to not prefer extension-based icon for some extensions
-  local ext3_blocklist = { scm = true, txt = true, yml = true }
-  local ext4_blocklist = { json = true, yaml = true }
-  require('mini.icons').setup({
-    use_file_extension = function(ext, _)
-      return not (ext3_blocklist[ext:sub(-3)] or ext4_blocklist[ext:sub(-4)])
-    end,
-  })
+    -- Set up to not prefer extension-based icon for some extensions
+    local ext3_blocklist = { scm = true, txt = true, yml = true }
+    local ext4_blocklist = { json = true, yaml = true }
+    require('mini.icons').setup({
+        use_file_extension = function(ext, _)
+            return not (ext3_blocklist[ext:sub(-3)] or ext4_blocklist[ext:sub(-4)])
+        end,
+    })
 
-  -- Mock 'nvim-tree/nvim-web-devicons' for plugins without 'mini.icons' support.
-  -- Not needed for 'mini.nvim' or MiniMax, but might be useful for others.
-  later(MiniIcons.mock_nvim_web_devicons)
+    -- Mock 'nvim-tree/nvim-web-devicons' for plugins without 'mini.icons' support.
+    -- Not needed for 'mini.nvim' or MiniMax, but might be useful for others.
+    later(MiniIcons.mock_nvim_web_devicons)
 
-  -- Add LSP kind icons. Useful for 'mini.completion'.
-  later(MiniIcons.tweak_lsp_kind)
+    -- Add LSP kind icons. Useful for 'mini.completion'.
+    later(MiniIcons.tweak_lsp_kind)
 end)
 
 -- Start screen. This is what is shown when you open Neovim like `nvim`.
@@ -68,19 +68,19 @@ now(function() require('mini.starter').setup() end)
 -- - `:h MiniFiles-manipulation` - more details about how to manipulate
 -- - `:h MiniFiles-examples` - examples of common setups
 now_if_args(function()
-  -- Enable directory/file preview
-  require('mini.files').setup({ windows = { preview = true } })
+    -- Enable directory/file preview
+    require('mini.files').setup({ windows = { preview = true } })
 
-  -- Add common bookmarks for every explorer. Example usage inside explorer:
-  -- - `'c` to navigate into your config directory
-  -- - `g?` to see available bookmarks
-  local add_marks = function()
-    MiniFiles.set_bookmark('c', vim.fn.stdpath('config'), { desc = 'Config' })
-    local vimpack_plugins = vim.fn.stdpath('data') .. '/site/pack/core/opt'
-    MiniFiles.set_bookmark('p', vimpack_plugins, { desc = 'Plugins' })
-    MiniFiles.set_bookmark('w', vim.fn.getcwd, { desc = 'Working directory' })
-  end
-  Config.new_autocmd('User', 'MiniFilesExplorerOpen', add_marks, 'Add bookmarks')
+    -- Add common bookmarks for every explorer. Example usage inside explorer:
+    -- - `'c` to navigate into your config directory
+    -- - `g?` to see available bookmarks
+    local add_marks = function()
+        MiniFiles.set_bookmark('c', vim.fn.stdpath('config'), { desc = 'Config' })
+        local vimpack_plugins = vim.fn.stdpath('data') .. '/site/pack/core/opt'
+        MiniFiles.set_bookmark('p', vimpack_plugins, { desc = 'Plugins' })
+        MiniFiles.set_bookmark('w', vim.fn.getcwd, { desc = 'Working directory' })
+    end
+    Config.new_autocmd('User', 'MiniFilesExplorerOpen', add_marks, 'Add bookmarks')
 end)
 
 -- Miscellaneous small but useful functions. Example usage:
@@ -91,21 +91,21 @@ end)
 -- - `:lua put(MiniMisc.stat_summary(MiniMisc.bench_time(f, 100)))` - run
 --   function `f` 100 times and report statistical summary of execution times
 now_if_args(function()
-  -- Makes `:h MiniMisc.put()` and `:h MiniMisc.put_text()` public
-  require('mini.misc').setup()
+    -- Makes `:h MiniMisc.put()` and `:h MiniMisc.put_text()` public
+    require('mini.misc').setup()
 
-  -- Change current working directory based on the current file path. It
-  -- searches up the file tree until the first root marker ('.git' or 'Makefile')
-  -- and sets their parent directory as a current directory.
-  -- This is helpful when simultaneously dealing with files from several projects.
-  MiniMisc.setup_auto_root()
+    -- Change current working directory based on the current file path. It
+    -- searches up the file tree until the first root marker ('.git' or 'Makefile')
+    -- and sets their parent directory as a current directory.
+    -- This is helpful when simultaneously dealing with files from several projects.
+    MiniMisc.setup_auto_root()
 
-  -- Restore latest cursor position on file open
-  MiniMisc.setup_restore_cursor()
+    -- Restore latest cursor position on file open
+    MiniMisc.setup_restore_cursor()
 
-  -- Synchronize terminal emulator background with Neovim's background to remove
-  -- possibly different color padding around Neovim instance
-  MiniMisc.setup_termbg_sync()
+    -- Synchronize terminal emulator background with Neovim's background to remove
+    -- possibly different color padding around Neovim instance
+    MiniMisc.setup_termbg_sync()
 end)
 
 -- Step two ===================================================================
@@ -134,45 +134,45 @@ later(function() require('mini.bufremove').setup() end)
 -- - `:h MiniClue.ensure_buf_triggers()` - use it to enable triggers in buffer
 -- - `:h MiniClue.set_mapping_desc()` - change mapping description not from config
 later(function()
-  local miniclue = require('mini.clue')
-  -- stylua: ignore
-  miniclue.setup({
-    -- Define which clues to show. By default shows only clues for custom mappings
-    -- (uses `desc` field from the mapping; takes precedence over custom clue).
-    clues = {
-      -- This is defined in 'plugin/20_keymaps.lua' with Leader group descriptions
-      Config.leader_group_clues,
-      miniclue.gen_clues.builtin_completion(),
-      miniclue.gen_clues.g(),
-      miniclue.gen_clues.marks(),
-      miniclue.gen_clues.registers(),
-      miniclue.gen_clues.square_brackets(),
-      -- This creates a submode for window resize mappings. Try the following:
-      -- - Press `<C-w>s` to make a window split.
-      -- - Press `<C-w>+` to increase height. Clue window still shows clues as if
-      --   `<C-w>` is pressed again. Keep pressing just `+` to increase height.
-      --   Try pressing `-` to decrease height.
-      -- - Stop submode either by `<Esc>` or by any key that is not in submode.
-      miniclue.gen_clues.windows({ submode_resize = true }),
-      miniclue.gen_clues.z(),
-    },
-    -- Explicitly opt-in for set of common keys to trigger clue window
-    triggers = {
-      { mode = { 'n', 'x' }, keys = '<Leader>' }, -- Leader triggers
-      { mode =   'n',        keys = '\\' },       -- mini.basics
-      { mode = { 'n', 'x' }, keys = '[' },        -- mini.bracketed
-      { mode = { 'n', 'x' }, keys = ']' },
-      { mode =   'i',        keys = '<C-x>' },    -- Built-in completion
-      { mode = { 'n', 'x' }, keys = 'g' },        -- `g` key
-      { mode = { 'n', 'x' }, keys = "'" },        -- Marks
-      { mode = { 'n', 'x' }, keys = '`' },
-      { mode = { 'n', 'x' }, keys = '"' },        -- Registers
-      { mode = { 'i', 'c' }, keys = '<C-r>' },
-      { mode =   'n',        keys = '<C-w>' },    -- Window commands
-      { mode = { 'n', 'x' }, keys = 's' },        -- `s` key (mini.surround, etc.)
-      { mode = { 'n', 'x' }, keys = 'z' },        -- `z` key
-    },
-  })
+    local miniclue = require('mini.clue')
+    -- stylua: ignore
+    miniclue.setup({
+        -- Define which clues to show. By default shows only clues for custom mappings
+        -- (uses `desc` field from the mapping; takes precedence over custom clue).
+        clues = {
+            -- This is defined in 'plugin/20_keymaps.lua' with Leader group descriptions
+            Config.leader_group_clues,
+            miniclue.gen_clues.builtin_completion(),
+            miniclue.gen_clues.g(),
+            miniclue.gen_clues.marks(),
+            miniclue.gen_clues.registers(),
+            miniclue.gen_clues.square_brackets(),
+            -- This creates a submode for window resize mappings. Try the following:
+            -- - Press `<C-w>s` to make a window split.
+            -- - Press `<C-w>+` to increase height. Clue window still shows clues as if
+            --   `<C-w>` is pressed again. Keep pressing just `+` to increase height.
+            --   Try pressing `-` to decrease height.
+            -- - Stop submode either by `<Esc>` or by any key that is not in submode.
+            miniclue.gen_clues.windows({ submode_resize = true }),
+            miniclue.gen_clues.z(),
+        },
+        -- Explicitly opt-in for set of common keys to trigger clue window
+        triggers = {
+            { mode = { 'n', 'x' }, keys = '<Leader>' }, -- Leader triggers
+            { mode = 'n',          keys = '\\' }, -- mini.basics
+            { mode = { 'n', 'x' }, keys = '[' },  -- mini.bracketed
+            { mode = { 'n', 'x' }, keys = ']' },
+            { mode = 'i',          keys = '<C-x>' }, -- Built-in completion
+            { mode = { 'n', 'x' }, keys = 'g' },  -- `g` key
+            { mode = { 'n', 'x' }, keys = "'" },  -- Marks
+            { mode = { 'n', 'x' }, keys = '`' },
+            { mode = { 'n', 'x' }, keys = '"' },  -- Registers
+            { mode = { 'i', 'c' }, keys = '<C-r>' },
+            { mode = 'n',          keys = '<C-w>' }, -- Window commands
+            { mode = { 'n', 'x' }, keys = 's' },  -- `s` key (mini.surround, etc.)
+            { mode = { 'n', 'x' }, keys = 'z' },  -- `z` key
+        },
+    })
 end)
 
 -- Pick anything with single window layout and fast matching. This is one of

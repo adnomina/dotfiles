@@ -154,16 +154,16 @@ label = 'Terminal'
 url = 'tuna://run/path.%252FApplications%252FGhostty.app/Open'
 
 [[comboMode.bindings]]
-iconPath = '/Applications/Nix Apps/Zed.app'
+iconPath = '/Applications/Zed.app'
 key = 'e'
 label = 'Editor'
 url = 'tuna://run/TunaCore.AllApplicationsCatalog.Zed/Open'
 
 [[comboMode.bindings]]
-iconPath = '/Applications/Zen.app'
+iconPath = '/Applications/Firefox Developer Edition.app'
 key = 'b'
 label = 'Browser'
-url = 'tuna://run/Tuna.Internal.RecentObjectsCatalog.Zen/Open'
+url = 'tuna://run/TunaCore.AllApplicationsCatalog.Firefox%20Developer%20Edition/Open'
 
 [hotkeys]
 custom = []

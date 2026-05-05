@@ -11,27 +11,6 @@ autocmd('TextYankPost', {
     group = highlight_group,
 })
 
--- Show floating diagnostic window on hover
-autocmd("CursorHold", {
-    callback = function()
-        vim.diagnostic.open_float(nil, {
-            focusable = false,
-            scope = "cursor",
-            close_events = { "BufLeave", "CursorMoved", "InsertEnter" },
-        })
-    end,
-})
-
-autocmd("FileType", {
-    pattern = {
-        "bash", "css", "diff", "dockerfile", "editorconfig",
-        "fish", "graphql", "html", "javascript", "javascriptreact",
-        "json", "json5", "lua", "nix", "prisma", "sql", "toml",
-        "typescript", "typescriptreact", "yaml",
-    },
-    callback = function() vim.treesitter.start() end,
-})
-
 autocmd("FileType", {
     pattern = "help",
     command = "wincmd L",
@@ -53,14 +32,4 @@ autocmd("LspAttach", {
             })
         end
     end,
-})
-
-autocmd("PackChanged", {
-    callback = function(ev)
-        local name, kind = ev.data.spec.name, ev.data.kind
-        if name == "nvim-treesitter" and kind == "update" then
-            if not ev.data.active then vim.cmd.packadd("nvim-treesitter") end
-            vim.cmd("TSUpdate")
-        end
-    end
 })

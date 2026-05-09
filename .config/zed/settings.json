@@ -13,7 +13,8 @@
 
     // Typography
     "buffer_font_family": "Monaspace Neon NF",
-    "buffer_font_size": 16,
+    "buffer_font_size": 18.0,
+    "agent_ui_font_size": 18.0,
 
     // Docks, Panels, and Bars
     "tab_bar": {

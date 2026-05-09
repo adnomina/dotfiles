@@ -137,12 +137,6 @@ label = 'Aerospace'
         url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520--focus-follows-window%25204/Run%20Text%20as%20Shell%20Command'
 
 [[comboMode.bindings]]
-iconPath = '/System/Applications/Utilities/Screenshot.app'
-key = 's'
-label = 'Screenshot'
-url = 'tuna://run/Tuna.Internal.RecentObjectsCatalog.Screenshot/Open'
-
-[[comboMode.bindings]]
 key = 'f'
 label = 'Finder'
 url = 'tuna://run/path.%252FSystem%252FLibrary%252FCoreServices%252FFinder.app/Open'

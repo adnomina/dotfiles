@@ -12,7 +12,6 @@ alias cat="bat"
 alias less="bat"
 alias cc="claude"
 alias oc="opencode"
-alias z="zeditor"
 alias find="fd"
 
 starship init fish | source
@@ -23,9 +22,5 @@ if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
-
-# Added by LM Studio CLI (lms)
-set -gx PATH $PATH /Users/nicolas/.lmstudio/bin
-# End of LM Studio CLI section
 
 eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"

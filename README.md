@@ -33,7 +33,6 @@ stow .
 
 ```
 dotfiles/
-├── .claude/        # Claude Code config, statusline, plugins
 ├── .config/
 │   ├── aerospace/  # AeroSpace tiling window manager
 │   ├── fish/       # Fish shell config and aliases
@@ -57,10 +56,10 @@ Packages are declared in `nix/flake.nix`. Nix manages most software; Homebrew is
 |---------|-------------|
 | `bat` | Cat clone with syntax highlighting |
 | `claude-code` | Claude Code CLI |
-| `colima` | Container runtime for macOS |
 | `coreutils` | GNU core utilities |
-| `docker` / `docker-compose` | Container tooling |
+| `docker` | Container tooling |
 | `findutils` | GNU find utilities |
+| `fnm` | Fast node manager |
 | `fzf` | Fuzzy finder |
 | `gawk` | GNU awk |
 | `gh` | GitHub CLI |
@@ -68,21 +67,18 @@ Packages are declared in `nix/flake.nix`. Nix manages most software; Homebrew is
 | `gnupg` | GNU Privacy Guard |
 | `gnused` | GNU sed |
 | `jq` | JSON processor |
-| `mise` | Polyglot runtime version manager |
 | `neovim` | Text editor |
 | `nerd-fonts.jetbrains-mono` | JetBrains Mono Nerd Font |
 | `nerd-fonts.monaspace` | Monaspace Nerd Font |
 | `nil` / `nixd` | Nix language servers |
 | `obsidian` | Markdown note-taking |
 | `opencode` | OpenCode CLI |
-| `postgresql_18` | PostgreSQL 18 |
 | `ripgrep` | Fast regex search |
 | `slack` | Team messaging |
 | `starship` | Cross-shell prompt |
 | `stow` | Symlink farm manager |
 | `tealdeer` | tldr pages client |
 | `tree-sitter` | Parser generator + CLI |
-| `zed-editor` | Zed code editor |
 
 ### Homebrew Casks (via nix-homebrew)
 
@@ -90,12 +86,11 @@ Packages are declared in `nix/flake.nix`. Nix manages most software; Homebrew is
 |------|-------------|
 | `aerospace` | Tiling window manager (from `nikitabobko/tap`) |
 | `beekeeper-studio` | SQL editor and database manager |
-| `figma` | Design tool |
 | `firefox@developer-edition` | Firefox Developer Edition |
 | `ghostty` | Ghostty terminal emulator |
 | `karabiner-elements` | Keyboard remapper |
 | `yaak` | API client |
-| `zen` | Zen browser |
+| `zed` | Zed code editor |
 
 ### System Defaults (macOS)
 
@@ -128,63 +123,9 @@ Aliases and integrations in `.config/fish/config.fish`:
 | `cat`, `less` | `bat` |
 | `cc` | `claude` |
 | `oc` | `opencode` |
-| `z` | `zeditor` |
 | `la` | `ls -la` |
 
-Integrations: `mise activate`, `starship init`, pnpm.
-
-### Neovim
-
-Uses native `vim.pack` for plugin management and built-in `vim.lsp` (no plugin wrappers).
-
-**Plugins:**
-
-| Plugin | Purpose |
-|--------|---------|
-| `mason.nvim` | LSP/tool installer |
-| `catppuccin/nvim` | Color scheme |
-| `which-key.nvim` | Keybinding hints |
-| `nvim-web-devicons` | File icons |
-| `fff.nvim` | File manager |
-| `nvim-lspconfig` | LSP configs |
-| `gitsigns.nvim` | Git hunk decorations |
-| `nvim-treesitter` | Syntax parsing |
-
-Completion uses the native `autocomplete` option (0.12 built-in, no plugin).
-
-**LSP servers** (managed via Mason):
-
-`vtsls` (TS/JS), `eslint`, `bashls`, `cssls`, `html`, `jsonls`, `lua_ls`, `prismals`, `sqlls`, `tailwindcss`, `graphql`
-
-**LSP keymaps** (active when LSP attaches):
-
-| Key | Action |
-|-----|--------|
-| `gd` | Go to definition |
-| `gD` | Go to declaration |
-| `K` | Hover docs |
-| `gK` | Signature help |
-| `<leader>cD` | Workspace diagnostics |
-| `<leader>U` | Open undo tree |
-| `gra` | Code action (0.12 built-in) |
-| `gri` | Go to implementation (0.12 built-in) |
-| `grn` | Rename (0.12 built-in) |
-| `grr` | References (0.12 built-in) |
-| `grt` | Go to type definition (0.12 built-in) |
-| `grx` | Run code lens (0.12 built-in) |
-| `gO` | Document symbols (0.12 built-in) |
-
-**Git hunk keymaps** (gitsigns):
-
-| Key | Action |
-|-----|--------|
-| `]h` / `[h` | Next / prev hunk |
-| `]H` / `[H` | Last / first hunk |
-| `<leader>ghs` | Stage hunk |
-| `<leader>ghr` | Reset hunk |
-| `<leader>ghS` | Stage buffer |
-| `<leader>ghb` | Blame line |
-| `<leader>ghd` | Diff this |
+Integrations: `starship init`, pnpm.
 
 ### Aerospace
 
@@ -218,7 +159,6 @@ Leader key: tap right Option (`⌥`).
 | Key | Action |
 |-----|--------|
 | `w` | **Aerospace** (submenu) |
-| `s` | Screenshot |
 | `f` | Finder |
 | `t` | Terminal (Ghostty) |
 | `e` | Editor (Zed) |
@@ -237,15 +177,6 @@ Leader key: tap right Option (`⌥`).
 | `j → h/j/k/l` | Join with left/down/up/right |
 | `m → h/j/k/l` | Move window left/down/up/right |
 | `m → 1/2/3/4` | Move node to workspace 1–4 (focus follows) |
-
-### Claude Code
-
-Config in `.claude/`:
-
-- Custom status line via `~/.claude/statusline.sh`
-- Enabled plugins: `skill-creator`, `figma`, `typescript-lsp`
-- Voice input enabled
-- Restricted bash permissions (version/help flags, `ls`, `bat`, `rg`)
 
 ## Theme
 

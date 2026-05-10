@@ -34,6 +34,7 @@
                 nil
                 nixd
                 obsidian
+                ollama
                 opencode
                 ripgrep
                 slack
@@ -61,7 +62,6 @@
                     "firefox@developer-edition"
                     "ghostty"
                     "karabiner-elements"
-                    "lm-studio"
                     "nikitabobko/tap/aerospace"
                     "yaak"
                     "zed"

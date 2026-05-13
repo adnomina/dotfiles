@@ -32,6 +32,7 @@
         "button": false,
     },
     "agent": {
+        "default_profile": "ask",
         "flexible": false,
         "inline_assistant_model": {
             "provider": "copilot_chat",
@@ -39,9 +40,9 @@
             "enable_thinking": false,
         },
         "default_model": {
-            "provider": "lmstudio",
-            "model": "google/gemma-4-e4b",
-            "enable_thinking": false,
+            "provider": "ollama",
+            "model": "gemma4:latest",
+            "enable_thinking": true,
         },
     },
     "bottom_dock_layout": "full",

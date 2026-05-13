@@ -1,6 +1,23 @@
 schemaVersion = 1
 
 [[comboMode.bindings]]
+iconPath = '/Applications/Firefox Developer Edition.app'
+key = 'b'
+label = 'Browser'
+url = 'tuna://run/TunaCore.AllApplicationsCatalog.Firefox%20Developer%20Edition/Open'
+
+[[comboMode.bindings]]
+key = 'f'
+label = 'Finder'
+url = 'tuna://run/path.%252FSystem%252FLibrary%252FCoreServices%252FFinder.app/Open'
+
+[[comboMode.bindings]]
+iconPath = '/Applications/Nix Apps/Obsidian.app'
+key = 'o'
+label = 'Obsidian'
+url = 'tuna://run/TunaCore.AllApplicationsCatalog.Obsidian/Open'
+
+[[comboMode.bindings]]
 iconPath = '/Applications/AeroSpace.app'
 key = 'w'
 label = 'Aerospace'
@@ -137,27 +154,16 @@ label = 'Aerospace'
         url = 'tuna://run/text.%252Fopt%252Fhomebrew%252Fbin%252Faerospace%2520move-node-to-workspace%2520--focus-follows-window%25204/Run%20Text%20as%20Shell%20Command'
 
 [[comboMode.bindings]]
-key = 'f'
-label = 'Finder'
-url = 'tuna://run/path.%252FSystem%252FLibrary%252FCoreServices%252FFinder.app/Open'
-
-[[comboMode.bindings]]
-iconPath = '/Applications/Ghostty.app'
-key = 't'
-label = 'Terminal'
-url = 'tuna://run/path.%252FApplications%252FGhostty.app/Open'
-
-[[comboMode.bindings]]
 iconPath = '/Applications/Zed.app'
-key = 'e'
+key = 'z'
 label = 'Editor'
 url = 'tuna://run/TunaCore.AllApplicationsCatalog.Zed/Open'
 
 [[comboMode.bindings]]
-iconPath = '/Applications/Firefox Developer Edition.app'
-key = 'b'
-label = 'Browser'
-url = 'tuna://run/TunaCore.AllApplicationsCatalog.Firefox%20Developer%20Edition/Open'
+iconPath = '/Applications/Ghostty.app'
+key = 'enter'
+label = 'Terminal'
+url = 'tuna://run/path.%252FApplications%252FGhostty.app/Open'
 
 [hotkeys]
 custom = []

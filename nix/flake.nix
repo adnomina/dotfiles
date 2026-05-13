@@ -65,6 +65,7 @@
                     "nikitabobko/tap/aerospace"
                     "yaak"
                     "zed"
+                    "1password-cli"
                 ];
             };
 

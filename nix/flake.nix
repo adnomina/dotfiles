@@ -52,10 +52,12 @@
                 };
                 taps = [
                     "nikitabobko/tap"
+                    "docker/tap"
                 ];
                 casks = [
                     "beekeeper-studio"
                     "docker"
+                    "docker/tap/sbx"
                     "firefox@developer-edition"
                     "ghostty"
                     "karabiner-elements"

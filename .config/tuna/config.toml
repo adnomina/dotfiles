@@ -22,7 +22,7 @@ sortOrders = []
 iconPath = '/Applications/Firefox Developer Edition.app'
 key = 'b'
 label = 'Browser'
-url = 'tuna://run/TunaCore.AllApplicationsCatalog.Firefox%20Developer%20Edition/Open'
+url = 'tuna://run/TunaCore.ApplicationsCatalog.Firefox%20Developer%20Edition/Open'
 
 [[comboMode.bindings]]
 key = 'f'
@@ -33,7 +33,7 @@ url = 'tuna://run/path.%252FSystem%252FLibrary%252FCoreServices%252FFinder.app/O
 iconPath = '/Applications/Nix Apps/Obsidian.app'
 key = 'o'
 label = 'Obsidian'
-url = 'tuna://run/TunaCore.AllApplicationsCatalog.Obsidian/Open'
+url = 'tuna://run/TunaCore.ApplicationsCatalog.Obsidian/Open'
 
 [[comboMode.bindings]]
 iconPath = '/Applications/AeroSpace.app'
@@ -175,13 +175,13 @@ label = 'Aerospace'
 iconPath = '/Applications/Zed.app'
 key = 'z'
 label = 'Editor'
-url = 'tuna://run/TunaCore.AllApplicationsCatalog.Zed/Open'
+url = 'tuna://run/TunaCore.ApplicationsCatalog.Zed/Open'
 
 [[comboMode.bindings]]
 iconPath = '/Applications/Ghostty.app'
 key = 'enter'
 label = 'Terminal'
-url = 'tuna://run/path.%252FApplications%252FGhostty.app/Open'
+url = 'tuna://run/TunaCore.ApplicationsCatalog.Ghostty/Open'
 
 [hotkeys]
 custom = []

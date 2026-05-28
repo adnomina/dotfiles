@@ -26,6 +26,7 @@
                 git
                 gnused
                 gnupg
+                helix
                 jq
                 neovim
                 nil

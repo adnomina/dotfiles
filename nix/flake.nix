@@ -24,6 +24,7 @@
                 nixd
                 prisma-language-server
                 tailwindcss-language-server
+                typescript-language-server
                 vscode-css-languageserver
                 vscode-json-languageserver
                 yaml-language-server

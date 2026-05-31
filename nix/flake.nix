@@ -1,162 +1,164 @@
 {
-    description = "nix-darwin system flake";
+  description = "nix-darwin system flake";
 
-    inputs = {
-        nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-        nix-darwin.url = "github:nix-darwin/nix-darwin/master";
-        nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
-        nix-homebrew.url = "github:zhaofengli/nix-homebrew";
-    };
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nix-darwin.url = "github:nix-darwin/nix-darwin/master";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
+  };
 
-    outputs = { self, nix-darwin, nix-homebrew, ... }:
+  outputs =
+    {
+      self,
+      nix-darwin,
+      nix-homebrew,
+      ...
+    }:
     let
-        configuration = { pkgs, ... }: {
-            # List packages installed in system profile. To search by name, run:
-            # $ nix-env -qaP | grep wget
-            environment.systemPackages = with pkgs; [
-                # Language servers
-                bash-language-server
-                docker-language-server
-                docker-compose-language-service
-                fish-lsp
-                graphql-language-service-cli
-                nil
-                nixd
-                prisma-language-server
-                tailwindcss-language-server
-                typescript-language-server
-                vscode-css-languageserver
-                vscode-json-languageserver
-                yaml-language-server
+      configuration =
+        { pkgs, ... }:
+        {
+          # List packages installed in system profile. To search by name, run:
+          # $ nix-env -qaP | grep wget
+          environment.systemPackages = with pkgs; [
+            # Language servers
+            bash-language-server
+            docker-language-server
+            docker-compose-language-service
+            fish-lsp
+            graphql-language-service-cli
+            nil
+            nixd
+            prisma-language-server
+            tailwindcss-language-server
+            typescript-language-server
+            vscode-css-languageserver
+            vscode-json-languageserver
+            yaml-language-server
 
-                # Utils
-                bat
-                coreutils
-                fd
-                findutils
-                fzf
-                gawk
-                gnused
-                gnupg
-                jq
-                ripgrep
-                stow
-                tealdeer
+            # Utils
+            bat
+            coreutils
+            fd
+            findutils
+            fzf
+            gawk
+            gnused
+            gnupg
+            jq
+            ripgrep
+            stow
+            tealdeer
 
-                # Editors
-                helix
-                neovim
+            # Editors
+            helix
+            neovim
 
-                # Dev tools
-                fnm
-                gh
-                git
+            # Dev tools
+            fnm
+            gh
+            git
 
-                # TUI apps
-                tmux
+            # TUI apps
+            tmux
 
-                # GUI apps
-                obsidian
-                slack
+            # GUI apps
+            beekeeper-studio
+            docker
+            firefox-devedition-unwrapped
+            ghostty-bin
+            obsidian
+            slack
+            yaak
+            zed-editor
 
-                # Clankers
-                claude-code
-                opencode
-                ollama
+            # Clankers
+            claude-code
+            ollama
+            opencode
 
-                # Misc
-                starship
-                tree-sitter
-            ];
+            # Misc
+            aerospace
+            karabiner-elements
+            starship
+            tree-sitter
+          ];
 
-            # Homebrew for packages not available in nixpkgs.
-            homebrew = {
-                enable = true;
-                onActivation = {
-                    autoUpdate = true;
-                upgrade = true;
-                    cleanup = "zap";
-                };
-                taps = [
-                    "nikitabobko/tap"
-                    "docker/tap"
-                ];
-                casks = [
-                    "beekeeper-studio"
-                    "docker"
-                    "docker/tap/sbx"
-                    "firefox@developer-edition"
-                    "ghostty"
-                    "karabiner-elements"
-                    "nikitabobko/tap/aerospace"
-                    "yaak"
-                    "zed"
-                    "1password-cli"
-                ];
+          # Homebrew for packages not available in nixpkgs.
+          homebrew = {
+            enable = true;
+            onActivation = {
+              autoUpdate = true;
+              upgrade = true;
+              cleanup = "zap";
             };
+            taps = [];
+            casks = [];
+          };
 
-            # Necessary for using flakes on this system.
-            nix.settings.experimental-features = "nix-command flakes";
+          # Necessary for using flakes on this system.
+          nix.settings.experimental-features = "nix-command flakes";
 
-            # Enable alternative shell support in nix-darwin.
-            programs.fish.enable = true;
+          # Enable alternative shell support in nix-darwin.
+          programs.fish.enable = true;
 
-            # Add fish to /etc/shells
-            environment.shells = [ pkgs.fish ];
+          # Add fish to /etc/shells
+          environment.shells = [ pkgs.fish ];
 
-            # Set Git commit hash for darwin-version.
-            system.configurationRevision = self.rev or self.dirtyRev or null;
+          # Set Git commit hash for darwin-version.
+          system.configurationRevision = self.rev or self.dirtyRev or null;
 
-            # Used for backwards compatibility, please read the changelog before changing.
-            # $ darwin-rebuild changelog
-            system.stateVersion = 6;
+          # Used for backwards compatibility, please read the changelog before changing.
+          # $ darwin-rebuild changelog
+          system.stateVersion = 6;
 
-            system.primaryUser = "nicolas";
+          system.primaryUser = "nicolas";
 
-            users.users.nicolas.shell = pkgs.fish;
+          users.users.nicolas.shell = pkgs.fish;
 
-            system.defaults = {
-                dock.autohide = true;
-                finder.FXPreferredViewStyle = "clmv";
-                loginwindow.GuestEnabled = false;
-                NSGlobalDomain.AppleInterfaceStyle = "Dark";
-            };
+          system.defaults = {
+            dock.autohide = true;
+            finder.FXPreferredViewStyle = "clmv";
+            loginwindow.GuestEnabled = false;
+            NSGlobalDomain.AppleInterfaceStyle = "Dark";
+          };
 
-            fonts.packages = [
-                pkgs.nerd-fonts.jetbrains-mono
-                pkgs.nerd-fonts.monaspace
-            ];
+          fonts.packages = [
+            pkgs.nerd-fonts.jetbrains-mono
+            pkgs.nerd-fonts.monaspace
+          ];
 
-            system.activationScripts.postActivation.text = ''
-                echo "Run this from the repo root to symlink dotfiles:"
-                echo "  stow ."
-            '';
+          system.activationScripts.postActivation.text = ''
+            echo "Run this from the repo root to symlink dotfiles:"
+            echo "  stow ."
+          '';
 
-            nixpkgs = {
-                # The platform the configuration will be used on.
-                hostPlatform = "aarch64-darwin";
+          nixpkgs = {
+            # The platform the configuration will be used on.
+            hostPlatform = "aarch64-darwin";
 
-                # Allow unfree packages.
-                config.allowUnfree = true;
-            };
+            # Allow unfree packages.
+            config.allowUnfree = true;
+          };
         };
     in
-        {
-            # Build darwin flake using:
-            # $ darwin-rebuild build --flake .#Nicks-MacBook-Pro
-            darwinConfigurations."Nicks-MacBook-Pro" = nix-darwin.lib.darwinSystem {
-                modules = [
-                    configuration
-                    nix-homebrew.darwinModules.nix-homebrew
-                    {
-                        nix-homebrew = {
-                            enable = true;
-                            enableRosetta = true;
-                            user = "nicolas";
-                            autoMigrate = true;
-                        };
-                    }
-                ];
+    {
+      # Build darwin flake using:
+      # $ darwin-rebuild build --flake .#Nicks-MacBook-Pro
+      darwinConfigurations."Nicks-MacBook-Pro" = nix-darwin.lib.darwinSystem {
+        modules = [
+          configuration
+          nix-homebrew.darwinModules.nix-homebrew
+          {
+            nix-homebrew = {
+              enable = true;
+              enableRosetta = true;
+              user = "nicolas";
+              autoMigrate = true;
             };
-        };
+          }
+        ];
+      };
+    };
 }

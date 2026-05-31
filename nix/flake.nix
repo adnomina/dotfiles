@@ -8,38 +8,64 @@
         nix-homebrew.url = "github:zhaofengli/nix-homebrew";
     };
 
-    outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
+    outputs = { self, nix-darwin, nix-homebrew, ... }:
     let
         configuration = { pkgs, ... }: {
             # List packages installed in system profile. To search by name, run:
             # $ nix-env -qaP | grep wget
             environment.systemPackages = with pkgs; [
-                bat
-                coreutils
-                claude-code
-                fd
-                findutils
-                fnm
-                fzf
-                gawk
-                gh
-                git
-                gnused
-                gnupg
-                helix
-                jq
-                neovim
+                # Language servers
+                bash-language-server
+                docker-language-server
+                docker-compose-language-service
+                fish-lsp
+                graphql-language-service-cli
                 nil
                 nixd
-                obsidian
-                ollama
-                opencode
+                prisma-language-server
+                tailwindcss-language-server
+                vscode-css-languageserver
+                vscode-html-languageserver
+                vscode-json-languageserver
+                yaml-language-server
+
+                # Utils
+                bat
+                coreutils
+                fd
+                findutils
+                fzf
+                gawk
+                gnused
+                gnupg
+                jq
                 ripgrep
-                slack
-                starship
                 stow
                 tealdeer
+
+                # Editors
+                helix
+                neovim
+
+                # Dev tools
+                fnm
+                gh
+                git
+
+                # TUI apps
                 tmux
+
+                # GUI apps
+                obsidian
+                slack
+
+                # Clankers
+                claude-code
+                opencode
+                ollama
+
+                # Misc
+                starship
                 tree-sitter
             ];
 

@@ -25,7 +25,6 @@
                 prisma-language-server
                 tailwindcss-language-server
                 vscode-css-languageserver
-                vscode-html-languageserver
                 vscode-json-languageserver
                 yaml-language-server
 

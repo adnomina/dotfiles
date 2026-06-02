@@ -64,6 +64,9 @@
             git
 
             # TUI apps
+            diffnav
+            gh-dash
+            gh-enhance
             tmux
 
             # GUI apps

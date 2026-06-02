@@ -77,6 +77,8 @@
 
             # Clankers
             claude-code
+            github-copilot-cli
+            crush
             ollama
             opencode
 

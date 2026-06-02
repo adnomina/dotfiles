@@ -50,12 +50,15 @@
             ripgrep
             stow
             tealdeer
+            tree
 
             # Editors
             helix
             neovim
 
             # Dev tools
+            colima
+            docker
             fnm
             gh
             git
@@ -65,7 +68,6 @@
 
             # GUI apps
             beekeeper-studio
-            docker
             firefox-devedition-unwrapped
             ghostty-bin
             obsidian

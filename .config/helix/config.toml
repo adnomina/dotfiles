@@ -1,0 +1,13 @@
+theme = "catppuccin_macchiato"
+
+[editor]
+color-modes = true
+cursorline = true
+line-number = "relative"
+mouse = false
+rulers = [80]
+scrolloff = 0
+true-color = true
+
+[editor.indent-guides]
+render = true

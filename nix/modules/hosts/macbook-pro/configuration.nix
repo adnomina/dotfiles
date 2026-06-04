@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.nixosModules.macBookProConfiguration = { pkgs, lib, ... }: {
+  flake.darwinModules.macBookProConfiguration = { pkgs, lib, ... }: {
     # List packages installed in system profile. To search by name, run:
     # $ nix-env -qaP | grep <package>
     environment.systemPackages = with pkgs; [

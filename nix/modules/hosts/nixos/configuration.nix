@@ -46,6 +46,9 @@
       variant = "";
     };
 
+    services.xserver.xkbOptions = "ctrl:nocaps";
+    console.useXkbConfig = true;
+
     # Enable CUPS to print documents.
     services.printing.enable = true;
 

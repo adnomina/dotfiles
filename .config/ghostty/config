@@ -5,8 +5,6 @@ font-size = 18
 font-thicken = true
 
 window-save-state = always
-window-height = 30
-window-width = 120
 
 shell-integration = fish
 shell-integration-features = ssh-terminfo,ssh-env

@@ -111,6 +111,8 @@
       NSGlobalDomain.AppleInterfaceStyle = "Dark";
     };
 
+    system.keyboard.remapCapsLockToControl = true;
+
     fonts.packages = [
       pkgs.nerd-fonts.jetbrains-mono
       pkgs.nerd-fonts.monaspace

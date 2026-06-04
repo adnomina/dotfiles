@@ -1,0 +1,132 @@
+{ self, inputs, ... }: {
+  flake.nixosModules.macBookProConfiguration = { pkgs, lib, ... }: {
+    # List packages installed in system profile. To search by name, run:
+    # $ nix-env -qaP | grep <package>
+    environment.systemPackages = with pkgs; [
+      # Language servers
+      bash-language-server
+      docker-language-server
+      docker-compose-language-service
+      fish-lsp
+      graphql-language-service-cli
+      nixd
+      prisma-language-server
+      tailwindcss-language-server
+      typescript-language-server
+      vscode-css-languageserver
+      vscode-json-languageserver
+      yaml-language-server
+
+      # Utils
+      bat
+      coreutils
+      fd
+      findutils
+      fzf
+      gawk
+      gnused
+      gnupg
+      jq
+      ripgrep
+      stow
+      tealdeer
+      tree
+
+      # Editors
+      helix
+      neovim
+
+      # Dev tools
+      colima
+      docker
+      fnm
+      gh
+      git
+
+      # TUI apps
+      diffnav
+      gh-dash
+      gh-enhance
+      tmux
+
+      # GUI apps
+      beekeeper-studio
+      firefox-devedition-unwrapped
+      ghostty-bin
+      obsidian
+      slack
+      yaak
+      zed-editor
+
+      # Clankers
+      claude-code
+      github-copilot-cli
+      crush
+      ollama
+      opencode
+
+      # Misc
+      aerospace
+      karabiner-elements
+      starship
+      tree-sitter
+    ];
+
+    # Homebrew for packages not available in nixpkgs.
+    homebrew = {
+      enable = true;
+      onActivation = {
+        autoUpdate = true;
+        upgrade = true;
+        cleanup = "zap";
+      };
+      taps = [];
+      casks = [];
+    };
+
+    # Necessary for using flakes on this system.
+    nix.settings.experimental-features = "nix-command flakes";
+
+    # Enable alternative shell support in nix-darwin.
+    programs.fish.enable = true;
+
+    # Add fish to /etc/shells
+    environment.shells = [ pkgs.fish ];
+
+    # Set Git commit hash for darwin-version.
+    system.configurationRevision = self.rev or self.dirtyRev or null;
+
+    # Used for backwards compatibility, please read the changelog before changing.
+    # $ darwin-rebuild changelog
+    system.stateVersion = 6;
+
+    system.primaryUser = "nicolas";
+
+    users.users.nicolas.shell = pkgs.fish;
+
+    system.defaults = {
+      dock.autohide = true;
+      finder.FXPreferredViewStyle = "clmv";
+      loginwindow.GuestEnabled = false;
+      NSGlobalDomain.AppleInterfaceStyle = "Dark";
+    };
+
+    fonts.packages = [
+      pkgs.nerd-fonts.jetbrains-mono
+      pkgs.nerd-fonts.monaspace
+    ];
+
+    system.activationScripts.postActivation.text = ''
+      echo "Run this from the repo root to symlink dotfiles:"
+      echo "  stow ."
+    '';
+
+    nixpkgs = {
+      # The platform the configuration will be used on.
+      hostPlatform = "aarch64-darwin";
+
+      # Allow unfree packages.
+      config.allowUnfree = true;
+    };
+  };
+}

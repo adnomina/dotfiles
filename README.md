@@ -37,7 +37,6 @@ dotfiles/
 │   ├── aerospace/  # AeroSpace tiling window manager
 │   ├── fish/       # Fish shell config and aliases
 │   ├── ghostty/    # Ghostty terminal + Catppuccin theme
-│   ├── karabiner/  # Karabiner-Elements: caps lock → ctrl
 │   ├── nvim/       # Neovim (Lua, native vim.pack + vim.lsp)
 │   ├── starship.toml  # Starship prompt (Catppuccin Mocha)
 │   ├── tuna/       # Tuna launcher: leader mode bindings
@@ -88,7 +87,6 @@ Packages are declared in `nix/flake.nix`. Nix manages most software; Homebrew is
 | `beekeeper-studio` | SQL editor and database manager |
 | `firefox@developer-edition` | Firefox Developer Edition |
 | `ghostty` | Ghostty terminal emulator |
-| `karabiner-elements` | Keyboard remapper |
 | `yaak` | API client |
 | `zed` | Zed code editor |
 
@@ -148,11 +146,7 @@ Tiling window manager with 4 persistent workspaces.
 
 Floating windows: Bitwarden, 1Password, Tuna.
 
-### Karabiner-Elements
-
-Caps Lock → Control remap.
-
-### Tuna Leader Mode
+### Tuna Combo Mode
 
 Leader key: tap right Option (`⌥`).
 

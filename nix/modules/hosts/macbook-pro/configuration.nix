@@ -67,7 +67,6 @@
 
       # Misc
       aerospace
-      karabiner-elements
       starship
       tree-sitter
     ];
@@ -111,7 +110,10 @@
       NSGlobalDomain.AppleInterfaceStyle = "Dark";
     };
 
-    system.keyboard.remapCapsLockToControl = true;
+    system.keyboard = {
+      enableKeyMapping = true;
+      remapCapsLockToControl = true;
+    };
 
     fonts.packages = [
       pkgs.nerd-fonts.jetbrains-mono

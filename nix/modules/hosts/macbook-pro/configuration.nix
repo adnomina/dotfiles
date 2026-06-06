@@ -51,9 +51,10 @@
 
       # GUI apps
       beekeeper-studio
-      firefox-devedition-unwrapped
+      firefox-devedition
       ghostty-bin
       obsidian
+      rio
       slack
       yaak
       zed-editor

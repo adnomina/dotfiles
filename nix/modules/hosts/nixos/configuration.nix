@@ -67,39 +67,7 @@
       isNormalUser = true;
       description = "Nicolas Herschke";
       extraGroups = [ "networkmanager" "wheel" ];
-      packages = with pkgs; [
-        # Utilities
-        bat
-        fd
-        fish
-        git
-        gh
-        ripgrep
-        stow
-        zoxide
-
-        # TUIs
-        helix
-
-        # GUIs
-        firefox-devedition
-        ghostty
-        rio
-
-        # Language servers
-        bash-language-server
-        docker-language-server
-        docker-compose-language-service
-        fish-lsp
-        graphql-language-service-cli
-        nixd
-        prisma-language-server
-        tailwindcss-language-server
-        typescript-language-server
-        vscode-css-languageserver
-        vscode-json-languageserver
-        yaml-language-server
-      ];
+      shell = pkgs.fish;
     };
 
     # Allow unfree packages
@@ -108,7 +76,49 @@
     # List packages installed in system profile. To search, run:
     # $ nix search <package>
     environment.systemPackages = with pkgs; [
+      # Utilities
+      bat
+      fd
+      fish
+      git
+      gh
+      ripgrep
+      starship
+      stow
+      zoxide
+
+      # TUIs
+      helix
+
+      # GUIs
+      firefox-devedition
+      ghostty
+      rio
+
+      # Language servers
+      bash-language-server
+      docker-language-server
+      docker-compose-language-service
+      fish-lsp
+      graphql-language-service-cli
+      nixd
+      prisma-language-server
+      tailwindcss-language-server
+      typescript-language-server
+      vscode-css-languageserver
+      vscode-json-languageserver
+      yaml-language-server
     ];
+
+    fonts.packages = with pkgs; [
+      nerd-fonts.monaspace
+    ];
+
+    # Enable fish shell support
+    programs.fish.enable = true;
+
+    # Add fish to /etc/shells
+    environment.shells = [ pkgs.fish ];
 
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.

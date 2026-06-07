@@ -1,6 +1,7 @@
 confirm-before-quit = false
 copy-on-select = true
 hide-mouse-cursor-when-typing = true
+theme = "catppuccin_macchiato"
 
 [adaptive-theme]
 light = "catppuccin_latte"

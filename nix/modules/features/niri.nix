@@ -26,7 +26,7 @@
         binds = {
           "Mod+S".spawn-sh =
             "${lib.getExe self'.packages.noctalia} ipc call launcher toggle";
-          "Mod+Return".spawn-sh = lib.getExe pkgs.ghostty;
+          "Mod+Return".spawn-sh = lib.getExe pkgs.rio;
         };
       };
     };

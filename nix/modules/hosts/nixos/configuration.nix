@@ -68,16 +68,22 @@
       description = "Nicolas Herschke";
       extraGroups = [ "networkmanager" "wheel" ];
       packages = with pkgs; [
+        # Utilities
         bat
         fd
-        firefox-devedition
         fish
         git
         gh
-        helix
-        nixd
         ripgrep
         stow
+        zoxide
+
+        # TUIs
+        helix
+
+        # GUIs
+        firefox-devedition
+        rio
 
         # Language servers
         bash-language-server
@@ -94,9 +100,6 @@
         yaml-language-server
       ];
     };
-
-    # Install firefox.
-    programs.firefox.enable = true;
 
     # Allow unfree packages
     nixpkgs.config.allowUnfree = true;

@@ -31,6 +31,7 @@
       stow
       tealdeer
       tree
+      zoxide
 
       # Editors
       helix

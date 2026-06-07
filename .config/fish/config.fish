@@ -2,7 +2,7 @@ function fish_greeting
     printf (set_color --bold 00FFFF)"Greetings, User. Welcome to the Grid.\n"(set_color normal)
 end
 
-set -gx EDITOR nvim
+set -gx EDITOR hx
 set -gx PATH /run/current-system/sw/bin $PATH
 
 alias la="ls -la"
@@ -17,10 +17,12 @@ alias find="fd"
 starship init fish | source
 
 # pnpm
-set -gx PNPM_HOME "/Users/nicolas/Library/pnpm"
+set -gx PNPM_HOME /Users/nicolas/Library/pnpm
 if not string match -q -- "$PNPM_HOME/bin" $PATH
-  set -gx PATH "$PNPM_HOME/bin" $PATH
+    set -gx PATH "$PNPM_HOME/bin" $PATH
 end
 # pnpm end
 
 eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
+
+zoxide init fish | source

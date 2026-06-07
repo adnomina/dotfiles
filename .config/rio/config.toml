@@ -1,0 +1,23 @@
+confirm-before-quit = false
+copy-on-select = true
+hide-mouse-cursor-when-typing = true
+
+[adaptive-theme]
+light = "catppuccin_latte"
+dark = "catppuccin_macchiato"
+
+[editor]
+program = "/run/current-system/sw/bin/hx"
+
+[effects]
+trail-cursor = true
+
+[fonts]
+size = 18
+family = "Monaspace Neon NF"
+
+[navigation]
+mode = "NativeTab"
+
+[shell]
+program = "/run/current-system/sw/bin/fish"

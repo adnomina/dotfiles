@@ -17,7 +17,7 @@ size = 18
 family = "Monaspace Neon NF"
 
 [navigation]
-mode = "NativeTab"
+mode = "Tab"
 
 [shell]
 program = "/run/current-system/sw/bin/fish"

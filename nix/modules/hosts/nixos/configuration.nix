@@ -83,6 +83,7 @@
 
         # GUIs
         firefox-devedition
+        ghostty
         rio
 
         # Language servers

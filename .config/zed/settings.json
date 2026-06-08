@@ -1,162 +1,160 @@
 {
-    // Theme
-    "theme": {
-        "mode": "system",
-        "light": "Catppuccin Latte",
-        "dark": "Catppuccin Macchiato"
+  // Theme
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Macchiato"
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Colored Zed Icons Theme Light",
+    "dark": "Colored Zed Icons Theme Dark"
+  },
+  // Typography
+  "buffer_font_family": "Monaspace Neon NF",
+  "buffer_font_size": 18.0,
+  "agent_ui_font_size": 18.0,
+  // Docks, Panels, and Bars
+  "tab_bar": {
+    "show": false,
+  },
+  "toolbar": {
+    "quick_actions": false,
+    "breadcrumbs": false,
+  },
+  "project_panel": {
+    "hide_root": true,
+    "starts_open": false,
+  },
+  "collaboration_panel": {
+    "button": false,
+  },
+  "agent": {
+    "default_profile": "ask",
+    "flexible": false,
+    "inline_assistant_model": {
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4.6",
+      "enable_thinking": false,
     },
-    "icon_theme": {
-        "mode": "system",
-        "light": "Colored Zed Icons Theme Light",
-        "dark": "Colored Zed Icons Theme Dark"
+    "default_model": {
+      "provider": "ollama",
+      "model": "gemma4:latest",
+      "enable_thinking": true,
     },
-
-    // Typography
-    "buffer_font_family": "Monaspace Neon NF",
-    "buffer_font_size": 18.0,
-    "agent_ui_font_size": 18.0,
-
-    // Docks, Panels, and Bars
-    "tab_bar": {
-        "show": false,
-    },
-    "toolbar": {
-        "quick_actions": false,
-        "breadcrumbs": false,
-    },
-    "project_panel": {
-        "hide_root": true,
-        "starts_open": false,
-    },
-    "collaboration_panel": {
-        "button": false,
-    },
-    "agent": {
-        "default_profile": "ask",
-        "flexible": false,
-        "inline_assistant_model": {
-            "provider": "copilot_chat",
-            "model": "claude-sonnet-4.6",
-            "enable_thinking": false,
-        },
-        "default_model": {
-            "provider": "ollama",
-            "model": "gemma4:latest",
-            "enable_thinking": true,
-        },
-    },
-    "bottom_dock_layout": "full",
-    "terminal": {
-        "font_family": "Monaspace Neon NF",
-        "keep_selection_on_copy": false,
-        "copy_on_select": true,
-        "option_as_meta": true,
-        "scrollbar": {
-            "show": "never",
-        },
-    },
+  },
+  "bottom_dock_layout": "full",
+  "terminal": {
+    "font_family": "Monaspace Neon NF",
+    "keep_selection_on_copy": false,
+    "copy_on_select": true,
+    "option_as_meta": true,
     "scrollbar": {
-        "show": "never",
+      "show": "never",
     },
-
-    // Editor
-    "vim_mode": true,
-    "vim": {
-        "use_smartcase_find": true,
+  },
+  "scrollbar": {
+    "show": "never",
+  },
+  // Editor
+  "vim_mode": false,
+  "helix_mode": true,
+  "vim": {
+    "use_smartcase_find": true,
+  },
+  "cursor_blink": false,
+  "drag_and_drop_selection": {
+    "enabled": false,
+  },
+  "show_whitespaces": "selection",
+  "inline_code_actions": false,
+  "lsp_document_colors": "none",
+  "format_on_save": "off",
+  "extend_comment_on_newline": false,
+  "vertical_scroll_margin": 0,
+  "git": {
+    "inline_blame": {
+      "enabled": false,
     },
-    "cursor_blink": false,
-    "drag_and_drop_selection": {
-        "enabled": false,
-    },
-    "show_whitespaces": "selection",
-    "inline_code_actions": false,
-    "lsp_document_colors": "none",
-    "format_on_save": "off",
-    "extend_comment_on_newline": false,
-    "vertical_scroll_margin": 0,
-    "git": {
-        "inline_blame": {
-            "enabled": false,
+  },
+  "close_on_file_delete": true,
+  "relative_line_numbers": "enabled",
+  "colorize_brackets": true,
+  "minimap": {
+    "show": "never",
+  },
+  "which_key": {
+    "delay_ms": 250,
+    "enabled": true,
+  },
+  "always_treat_brackets_as_autoclosed": true,
+  "indent_guides": {
+    "coloring": "indent_aware",
+  },
+  "soft_wrap": "bounded",
+  "hover_popover_delay": 250,
+  "tab_size": 4,
+  // LSP
+  "prettier": {
+    "allowed": true,
+  },
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
         },
-    },
-    "close_on_file_delete": true,
-    "relative_line_numbers": "enabled",
-    "colorize_brackets": true,
-    "minimap": {
-        "show": "never",
-    },
-    "which_key": {
-        "delay_ms": 250,
-        "enabled": true,
-    },
-    "always_treat_brackets_as_autoclosed": true,
-    "indent_guides": {
-        "coloring": "indent_aware",
-    },
-    "soft_wrap": "bounded",
-    "hover_popover_delay": 250,
-    "tab_size": 4,
-
-    // LSP
-    "prettier": {
-        "allowed": true,
-    },
-    "lsp": {
-        "vtsls": {
-            "settings": {
-                "typescript": {
-                    "updateImportsOnFileMove": {
-                        "enabled": "always",
-                    },
-                },
-                "javascript": {
-                    "updateImportsOnFileMove": {
-                        "enabled": "always",
-                    },
-                },
-            },
-            "enable_lsp_tasks": true,
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
         },
-        "tailwindcss-language-server": {
-            "settings": {
-                "classFunctions": ["cva", "cx"],
-            },
-        },
+      },
+      "enable_lsp_tasks": true,
     },
-
-    // AI Agent
-    "show_edit_predictions": true,
-    "edit_predictions": {
-        "provider": "copilot",
-        "mode": "subtle"
+    "tailwindcss-language-server": {
+      "settings": {
+        "classFunctions": [
+          "cva",
+          "cx"
+        ],
+      },
     },
-    "agent_servers": {
-        "opencode": {
-            "type": "registry"
-        },
-        "github-copilot-cli": {
-            "type": "registry"
-        },
-        "claude-acp": {
-            "type": "registry",
-            "default_config_options": {
-                "mode": "acceptEdits"
-            }
-        }
+  },
+  // AI Agent
+  "show_edit_predictions": true,
+  "edit_predictions": {
+    "provider": "copilot",
+    "mode": "subtle"
+  },
+  "agent_servers": {
+    "opencode": {
+      "type": "registry"
     },
-    "language_models": {
-        "lmstudio": {
-            "api_url": "http://localhost:1234/v1"
-        }
+    "github-copilot-cli": {
+      "type": "registry"
     },
-
-    // Miscellaneous
-    "use_system_window_tabs": true,
-    "session": {
-        "trust_all_worktrees": true,
-    },
-    "telemetry": {
-        "diagnostics": false,
-        "metrics": false,
-    },
+    "claude-acp": {
+      "type": "registry",
+      "default_config_options": {
+        "mode": "acceptEdits"
+      }
+    }
+  },
+  "language_models": {
+    "lmstudio": {
+      "api_url": "http://localhost:1234/v1"
+    }
+  },
+  // Miscellaneous
+  "use_system_window_tabs": true,
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
 }

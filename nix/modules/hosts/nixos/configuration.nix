@@ -76,12 +76,15 @@
     # List packages installed in system profile. To search, run:
     # $ nix search <package>
     environment.systemPackages = with pkgs; [
+      # Dev tools
+      fnm
+      git
+      gh
+      
       # Utilities
       bat
       fd
       fish
-      git
-      gh
       ripgrep
       starship
       stow

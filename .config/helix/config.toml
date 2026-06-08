@@ -3,6 +3,7 @@ theme = "catppuccin_macchiato"
 [editor]
 color-modes = true
 cursorline = true
+end-of-line-diagnostics = "hint"
 line-number = "relative"
 mouse = false
 rulers = [80]
@@ -11,3 +12,6 @@ true-color = true
 
 [editor.indent-guides]
 render = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"

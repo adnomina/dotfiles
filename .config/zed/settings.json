@@ -11,7 +11,7 @@
     "dark": "Colored Zed Icons Theme Dark"
   },
   // Typography
-  "buffer_font_family": "Monaspace Neon NF",
+  "buffer_font_family": "MonaspiceNe Nerd Font",
   "buffer_font_size": 18.0,
   "agent_ui_font_size": 18.0,
   // Docks, Panels, and Bars
@@ -45,7 +45,7 @@
   },
   "bottom_dock_layout": "full",
   "terminal": {
-    "font_family": "Monaspace Neon NF",
+    "font_family": "MonaspiceNe Nerd Font",
     "keep_selection_on_copy": false,
     "copy_on_select": true,
     "option_as_meta": true,
@@ -91,7 +91,8 @@
   "indent_guides": {
     "coloring": "indent_aware",
   },
-  "soft_wrap": "bounded",
+  "wrap_guides": [80],
+  "soft_wrap": "editor_width",
   "hover_popover_delay": 250,
   "tab_size": 4,
   // LSP

@@ -57,11 +57,7 @@
     "show": "never",
   },
   // Editor
-  "vim_mode": false,
   "helix_mode": true,
-  "vim": {
-    "use_smartcase_find": true,
-  },
   "cursor_blink": false,
   "drag_and_drop_selection": {
     "enabled": false,

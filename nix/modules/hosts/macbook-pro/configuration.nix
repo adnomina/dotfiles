@@ -43,6 +43,7 @@
       fnm
       gh
       git
+      krunkit
 
       # TUI apps
       diffnav

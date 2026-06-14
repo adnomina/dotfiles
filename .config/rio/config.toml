@@ -15,7 +15,7 @@ trail-cursor = true
 
 [fonts]
 size = 18
-family = "MonaspiceNe Nerd Font"
+family = "JetBrainsMono Nerd Font"
 
 [navigation]
 mode = "Tab"

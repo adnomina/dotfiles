@@ -64,6 +64,7 @@
       # Clankers
       claude-code
       github-copilot-cli
+      nono
       opencode
 
       # Misc

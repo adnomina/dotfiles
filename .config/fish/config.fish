@@ -8,8 +8,6 @@ set -gx PATH /run/current-system/sw/bin $PATH
 alias la="ls -la"
 alias vi='nvim'
 alias vim='nvim'
-alias cat="bat"
-alias less="bat"
 alias cc="claude"
 alias oc="opencode"
 alias find="fd"

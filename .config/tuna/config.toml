@@ -178,10 +178,10 @@ label = 'Editor'
 url = 'tuna://run/TunaCore.ApplicationsCatalog.Zed/Open'
 
 [[comboMode.bindings]]
-iconPath = '/Applications/Nix Apps/Rio.app'
+iconPath = '/Applications/Nix Apps/Ghostty.app'
 key = 'enter'
 label = 'Terminal'
-url = 'tuna://run/TunaCore.ApplicationsCatalog.Rio/TunaCore.CommonActionsCatalog.Open'
+url = 'tuna://run/TunaCore.ApplicationsCatalog.Ghostty/TunaCore.CommonActionsCatalog.Open'
 
 [hotkeys]
 custom = []

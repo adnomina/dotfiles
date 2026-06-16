@@ -44,6 +44,7 @@
       gh
       git
       krunkit
+      postgresql
 
       # TUI apps
       diffnav

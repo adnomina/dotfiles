@@ -11,6 +11,12 @@ function fish_greeting
     printf (set_color --bold 00FFFF)"Greetings, User. Welcome to the Grid.\n"(set_color normal)
 end
 
+function rr
+    set cmd (history | fzf --header "Choose the command to rerun.")
+
+    eval "$cmd"
+end
+
 # Aliases
 alias la="ls -la"
 alias vi='nvim'

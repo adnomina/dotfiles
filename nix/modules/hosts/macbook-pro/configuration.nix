@@ -74,18 +74,6 @@
       tree-sitter
     ];
 
-    # Homebrew for packages not available in nixpkgs.
-    homebrew = {
-      enable = true;
-      onActivation = {
-        autoUpdate = true;
-        upgrade = true;
-        cleanup = "zap";
-      };
-      taps = [];
-      casks = [];
-    };
-
     # Necessary for using flakes on this system.
     nix.settings.experimental-features = "nix-command flakes";
 

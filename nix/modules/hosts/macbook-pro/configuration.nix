@@ -56,6 +56,7 @@
       beekeeper-studio
       firefox-devedition
       ghostty-bin
+      net-news-wire
       obsidian
       rio
       slack

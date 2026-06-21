@@ -21,7 +21,7 @@ end
 alias la="ls -la"
 alias vi='nvim'
 alias vim='nvim'
-alias claude="nono run --profile claude-code --allow . -- claude"
+alias claude="nono run --profile claude --allow . -- claude"
 alias opencode="nono run --profile opencode --allow . -- opencode"
 alias cc="claude"
 alias oc="opencode"

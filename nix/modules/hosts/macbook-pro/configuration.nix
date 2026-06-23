@@ -50,6 +50,7 @@
       diffnav
       gh-dash
       gh-enhance
+      glow
       tmux
 
       # GUI apps

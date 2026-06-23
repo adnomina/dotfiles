@@ -21,6 +21,15 @@ end
 alias la="ls -la"
 alias vi='nvim'
 alias vim='nvim'
+
+alias ga="git add"
+alias gb="git branch -l"
+alias gc="git commit"
+alias gd="git diff"
+alias gl="git log"
+alias gr="git restore"
+alias gs="git status"
+
 alias claude="nono run --profile claude --allow . -- claude"
 alias opencode="nono run --profile opencode --allow . -- opencode"
 alias cc="claude"

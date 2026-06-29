@@ -52,6 +52,10 @@
     "scrollbar": {
       "show": "never",
     },
+    "env": {
+      "EDITOR": "zed --wait",
+      "VISUAL": "zed --wait"
+    }
   },
   "scrollbar": {
     "show": "never",
@@ -87,7 +91,9 @@
   "indent_guides": {
     "coloring": "indent_aware",
   },
-  "wrap_guides": [80],
+  "wrap_guides": [
+    80
+  ],
   "soft_wrap": "editor_width",
   "hover_popover_delay": 250,
   "tab_size": 4,

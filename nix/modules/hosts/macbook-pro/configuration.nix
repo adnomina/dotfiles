@@ -68,6 +68,7 @@
       claude-code
       github-copilot-cli
       nono
+      ollama
       opencode
 
       # Misc

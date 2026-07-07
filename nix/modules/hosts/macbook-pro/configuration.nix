@@ -40,10 +40,12 @@
       # Dev tools
       colima
       docker
+      docker-compose
       fnm
       gh
       git
       krunkit
+      mise
       postgresql
 
       # TUI apps

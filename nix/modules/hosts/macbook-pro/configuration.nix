@@ -44,16 +44,16 @@
       fnm
       gh
       git
-      krunkit
+      herdr
       mise
+      nono
       postgresql
 
       # TUI apps
-      diffnav
       gh-dash
       gh-enhance
       glow
-      tmux
+      lazygit
 
       # GUI apps
       beekeeper-studio
@@ -61,7 +61,7 @@
       ghostty-bin
       net-news-wire
       obsidian
-      rio
+      # rio
       slack
       yaak
       zed-editor
@@ -69,12 +69,10 @@
       # Clankers
       claude-code
       github-copilot-cli
-      nono
       ollama
       opencode
 
       # Misc
-      aerospace
       starship
       tree-sitter
     ];

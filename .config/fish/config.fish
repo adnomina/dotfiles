@@ -31,10 +31,8 @@ alias gl="git log"
 alias gr="git restore"
 alias gs="git status"
 
-alias claude="nono run --profile claude --allow . -- claude"
-alias opencode="nono run --profile opencode --allow . -- opencode"
-alias cc="claude"
-alias oc="opencode"
+alias cc="nono run --profile claude --allow . -- claude"
+alias oc="nono run --profile opencode --allow . -- opencode"
 
 # Init scripts
 starship init fish | source

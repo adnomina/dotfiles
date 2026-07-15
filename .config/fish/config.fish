@@ -38,3 +38,4 @@ alias oc="nono run --profile opencode --allow . -- opencode"
 starship init fish | source
 zoxide init fish | source
 eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
+mise activate fish | source

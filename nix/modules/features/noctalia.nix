@@ -1,5 +1,5 @@
-{ self, inputs, ... }: {
-  perSystem = { pkgs, lib, ... }: lib.optionalAttrs pkgs.stdenv.isLinux {
+{ inputs, ... }: {
+  perSystem = { pkgs, ... }: {
     packages.noctalia = inputs.wrapper-modules.wrappers.noctalia-shell.wrap {
       inherit pkgs;
       settings =

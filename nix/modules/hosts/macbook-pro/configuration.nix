@@ -69,6 +69,7 @@
       # Clankers
       claude-code
       github-copilot-cli
+      llama-cpp
       ollama
       opencode
 

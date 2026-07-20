@@ -1,17 +1,38 @@
-# This is Git's per-user configuration file.
+[commit]
+	gpgsign = true
+
+[color]
+	ui = auto
+
+[core]
+	editor = hx
+	autocrlf = input
+
+[credential]
+	helper = osxkeychain
+
+[fetch]
+	prune = true
+
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+    allowedSignersFile = ~/.ssh/allowed_signers
+
+# [includeIf "hasconfig:remote.*.url:https://mercedes-benz.ghe.com/**"]
+    # path = ~/.gitconfig-mb
+
+[init]
+	defaultBranch = main
+
+[push]
+	autoSetupRemote = true
+
+[tag]
+	gpgsign = true
+
 [user]
 	name = Nicolas Herschke
 	email = nicolas.herschke@gmx.de
-	signingKey = /Users/nicolas/.ssh/id_ed25519.pub
-[init]
-	defaultBranch = main
-[diff]
-    tool = nvim_difftool
-[difftool "nvim_difftool"]
-    cmd = nvim -c \"packadd nvim.difftool\" -c \"DiffTool $LOCAL $REMOTE\"
-[gpg]
-	format = ssh
-[commit]
-	gpgsign = true
-[tag]
-	gpgsign = true
+	signingkey = /Users/nicolas/.ssh/id_ed25519.pub

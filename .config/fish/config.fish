@@ -28,11 +28,17 @@ alias gc="git commit"
 alias gd="git diff"
 alias gf="git fetch"
 alias gl="git log"
+alias gm="git merge"
+alias gpl="git pull"
+alias gps="git push"
 alias gr="git restore"
-alias gs="git status"
+alias gst="git status"
+alias gsc="git switch -c"
+alias gsw="git switch"
 
 alias cc="nono run --profile claude --allow . -- claude"
 alias oc="nono run --profile opencode --allow . -- opencode"
+alias co="nono run --profile copilot-cli --allow-cwd -- copilot"
 
 # Init scripts
 starship init fish | source

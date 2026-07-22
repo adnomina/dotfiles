@@ -10,6 +10,7 @@
     "light": "Colored Zed Icons Theme Light",
     "dark": "Colored Zed Icons Theme Dark"
   },
+  "diff_view_style": "unified",
   // Typography
   "buffer_font_family": "MonaspiceNe Nerd Font",
   "buffer_font_size": 18.0,
@@ -20,10 +21,8 @@
   },
   "toolbar": {
     "quick_actions": false,
-    "breadcrumbs": false,
   },
   "project_panel": {
-    "hide_root": true,
     "starts_open": false,
   },
   "collaboration_panel": {
@@ -36,11 +35,6 @@
       "provider": "copilot_chat",
       "model": "claude-sonnet-4.6",
       "enable_thinking": false,
-    },
-    "default_model": {
-      "provider": "ollama",
-      "model": "gemma4:latest",
-      "enable_thinking": true,
     },
   },
   "bottom_dock_layout": "full",
@@ -137,6 +131,9 @@
       "type": "registry"
     },
     "github-copilot-cli": {
+      "default_config_options": {
+        "model": "claude-sonnet-4.6"
+      },
       "type": "registry"
     },
     "claude-acp": {
@@ -147,8 +144,9 @@
     }
   },
   "language_models": {
-    "lmstudio": {
-      "api_url": "http://localhost:1234/v1"
+    "opencode": {
+      "show_go_models": false,
+      "show_zen_models": false
     }
   },
   // Miscellaneous

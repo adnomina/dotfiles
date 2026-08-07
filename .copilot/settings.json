@@ -1,0 +1,60 @@
+{
+  "extraKnownMarketplaces": {
+    "beat-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "https://mercedes-benz.ghe.com/BEATeam/BEAT_R-Platform-Marketplace.git"
+      }
+    },
+    "nolabs-ai": {
+      "source": {
+        "source": "github",
+        "repo": "nolabs-ai/nono-packs-copilot"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "project-management@beat-marketplace": true,
+    "guardrails@beat-marketplace": true
+  },
+  "model": "auto",
+  "askUser": true,
+  "banner": "never",
+  "compactPaste": true,
+  "copyOnSelect": true,
+  "experimental": true,
+  "includeCoAuthoredBy": false,
+  "memory": true,
+  "mouse": false,
+  "renderMarkdown": true,
+  "respectGitignore": true,
+  "showReasoning": true,
+  "showTipsOnStartup": false,
+  "terminalProgress": true,
+  "ide": {
+    "autoConnect": false
+  },
+  "updateTerminalTitle": true,
+  "footer": {
+    "showModelEffort": true,
+    "showDirectory": true,
+    "showBranch": true,
+    "showContextWindow": true,
+    "showQuota": true,
+    "showAiUsed": true,
+    "showAgent": true,
+    "showCodeChanges": true,
+    "showUsername": true,
+    "showSandbox": true,
+    "showCustom": true
+  },
+  "subagents": {
+    "agents": {
+      "rubber-duck": {
+        "autoInvoke": true
+      }
+    }
+  },
+  "effortLevel": "auto",
+  "stream": true
+}

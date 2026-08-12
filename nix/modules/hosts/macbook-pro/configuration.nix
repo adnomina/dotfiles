@@ -5,6 +5,7 @@
     environment.systemPackages = with pkgs; [
       # Language servers
       bash-language-server
+      basedpyright
       docker-language-server
       docker-compose-language-service
       fish-lsp

@@ -34,12 +34,10 @@ stow .
 ```
 dotfiles/
 ├── .config/
-│   ├── aerospace/  # AeroSpace tiling window manager
 │   ├── fish/       # Fish shell config and aliases
 │   ├── ghostty/    # Ghostty terminal + Catppuccin theme
 │   ├── nvim/       # Neovim (Lua, native vim.pack + vim.lsp)
 │   ├── starship.toml  # Starship prompt (Catppuccin Mocha)
-│   ├── tuna/       # Tuna launcher: leader mode bindings
 │   ├── wezterm/    # WezTerm terminal emulator
 │   └── zed/        # Zed editor settings + keybindings
 └── nix/            # Nix flake (system packages + macOS defaults)
@@ -83,7 +81,6 @@ Packages are declared in `nix/flake.nix`. Nix manages most software; Homebrew is
 
 | Cask | Description |
 |------|-------------|
-| `aerospace` | Tiling window manager (from `nikitabobko/tap`) |
 | `beekeeper-studio` | SQL editor and database manager |
 | `firefox@developer-edition` | Firefox Developer Edition |
 | `ghostty` | Ghostty terminal emulator |
@@ -124,53 +121,6 @@ Aliases and integrations in `.config/fish/config.fish`:
 | `la` | `ls -la` |
 
 Integrations: `starship init`, pnpm.
-
-### Aerospace
-
-Tiling window manager with 4 persistent workspaces.
-
-**Main bindings:**
-
-| Key | Action |
-|-----|--------|
-| `Alt-h/j/k/l` | Focus left/down/up/right |
-| `Alt-Shift-h/l` | Previous / next workspace |
-
-**Resize mode** (enter via Tuna `w → r`):
-
-| Key | Action |
-|-----|--------|
-| `h/l` | Shrink / grow width by 50px |
-| `j/k` | Shrink / grow height by 50px |
-| `Enter` / `Esc` / `Ctrl-C` | Exit resize mode |
-
-Floating windows: Bitwarden, 1Password, Tuna.
-
-### Tuna Combo Mode
-
-Leader key: tap right Option (`⌥`).
-
-| Key | Action |
-|-----|--------|
-| `w` | **Aerospace** (submenu) |
-| `f` | Finder |
-| `t` | Terminal (Ghostty) |
-| `e` | Editor (Zed) |
-| `b` | Browser (Zen) |
-
-#### Aerospace submenu (`w → …`)
-
-| Key | Action |
-|-----|--------|
-| `1` / `2` / `3` / `4` | Switch to workspace 1–4 |
-| `f` | Fullscreen |
-| `r` | Enter resize mode |
-| `l → h/v` | Layout h_accordion / v_accordion |
-| `l → t` | Layout tiles |
-| `l → f` | Toggle floating/tiling |
-| `j → h/j/k/l` | Join with left/down/up/right |
-| `m → h/j/k/l` | Move window left/down/up/right |
-| `m → 1/2/3/4` | Move node to workspace 1–4 (focus follows) |
 
 ## Theme
 

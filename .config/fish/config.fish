@@ -38,6 +38,7 @@ alias gsc="git switch -c"
 alias gsw="git switch"
 
 alias dcu="docker compose up"
+alias dcw="docker compose watch"
 alias dcd="docker compose down"
 alias dcp="docker compose ps"
 alias dcl="docker compose logs -f"

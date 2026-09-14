@@ -55,6 +55,10 @@
     "scrollbar": {
         "show": "never",
     },
+    "git_panel": {
+        "group_by": "staging",
+        "tree_view": true,
+    },
     // Editor
     "helix_mode": true,
     "cursor_blink": false,

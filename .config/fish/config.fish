@@ -1,7 +1,10 @@
+# The following lines were added by Docker Desktop to add commands to your PATH.
+export PATH="$PATH:/Users/nicolas/.docker/bin"
+# End of Docker Desktop section.
+
 # Variables
 set -gx EDITOR hx
 set -gx PATH /run/current-system/sw/bin $PATH
-set -gx PATH /Users/nicolas/.docker/bin $PATH
 set -gx PNPM_HOME /Users/nicolas/Library/pnpm
 if not string match -q -- "$PNPM_HOME/bin" $PATH
     set -gx PATH "$PNPM_HOME/bin" $PATH

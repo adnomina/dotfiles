@@ -34,13 +34,20 @@
     "command": "~/.claude/statusline.sh"
   },
   "enabledPlugins": {
-    "i-have-adhd@i-have-adhd": true
+    "i-have-adhd@i-have-adhd": true,
+    "guardrails@peerigon-claude-plugins": true
   },
   "extraKnownMarketplaces": {
     "i-have-adhd": {
       "source": {
         "source": "github",
         "repo": "ayghri/i-have-adhd"
+      }
+    },
+    "peerigon-claude-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "peerigon/claude-plugins"
       }
     }
   },

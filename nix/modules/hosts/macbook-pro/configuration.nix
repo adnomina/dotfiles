@@ -69,7 +69,7 @@
       enable = true;
 
       casks = [
-        "beekeeper-studio"
+        "dbeaver-community"
         "docker-desktop"
         "firefox@developer-edition"
         "ghostty"

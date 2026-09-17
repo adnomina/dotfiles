@@ -69,6 +69,7 @@
       enable = true;
 
       casks = [
+        "block-goose"
         "dbeaver-community"
         "docker-desktop"
         "firefox@developer-edition"

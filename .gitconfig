@@ -36,3 +36,4 @@
 	name = Nicolas Herschke
 	email = nicolas.herschke@gmx.de
 	signingkey = /Users/nicolas/.ssh/id_ed25519.pub
+	signingkey = /var/home/nicolas/.ssh/id_ed25519.pub

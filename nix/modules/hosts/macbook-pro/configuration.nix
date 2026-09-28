@@ -79,6 +79,7 @@
         "slack"
         "yaak"
         "zed"
+        "zen"
       ];
 
       onActivation = {

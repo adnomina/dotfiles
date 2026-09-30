@@ -50,8 +50,6 @@
       # Clankers
       claude-code
       github-copilot-cli
-      ollama
-      opencode
 
       # Misc
       starship
@@ -69,7 +67,6 @@
       enable = true;
 
       casks = [
-        "block-goose"
         "dbeaver-community"
         "docker-desktop"
         "firefox@developer-edition"

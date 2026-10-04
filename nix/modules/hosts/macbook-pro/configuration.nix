@@ -71,7 +71,6 @@
         "docker-desktop"
         "firefox@developer-edition"
         "ghostty"
-        "netnewswire"
         "obsidian"
         "slack"
         "yaak"

@@ -55,3 +55,6 @@ starship init fish | source
 zoxide init fish | source
 eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
 mise activate fish | source
+### bling.fish source start
+test -f /usr/share/ublue-os/bling/bling.fish && source /usr/share/ublue-os/bling/bling.fish
+### bling.fish source end

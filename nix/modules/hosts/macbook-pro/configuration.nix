@@ -69,7 +69,7 @@
       casks = [
         "dbeaver-community"
         "docker-desktop"
-        "firefox@developer-edition"
+        "firefox"
         "ghostty"
         "obsidian"
         "slack"

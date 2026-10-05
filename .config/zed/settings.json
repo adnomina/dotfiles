@@ -1,7 +1,7 @@
 {
     // Theme
     "cursor_animation": {
-        "enabled": true
+        "enabled": true,
     },
     "cli_default_open_behavior": "existing_window",
     "theme": {
@@ -16,7 +16,7 @@
     },
     "diff_view_style": "unified",
     // Typography
-    "buffer_font_family": "MonaspiceNe Nerd Font",
+    "buffer_font_family": "Monaspace Neon NF",
     "buffer_font_size": 18.0,
     "agent_ui_font_size": 18.0,
     // Docks, Panels, and Bars
@@ -71,7 +71,7 @@
     "show_whitespaces": "selection",
     "inline_code_actions": false,
     "lsp_document_colors": "none",
-    "format_on_save": "off",
+    "format_on_save": "on",
     "extend_comment_on_newline": false,
     "vertical_scroll_margin": 0,
     "git": {
@@ -123,6 +123,7 @@
             },
         },
     },
+    "document_folding_ranges": "on",
     // AI Agent
     "show_edit_predictions": false,
     "edit_predictions": {
@@ -165,4 +166,5 @@
         "diagnostics": false,
         "metrics": false,
     },
+    "use_podman": true,
 }

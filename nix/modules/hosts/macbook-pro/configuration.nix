@@ -39,7 +39,6 @@
       neovim
 
       # Dev tools
-      fnm
       gh
       git
       mise

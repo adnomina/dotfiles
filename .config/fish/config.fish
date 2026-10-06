@@ -53,7 +53,6 @@ alias co="nono run --profile copilot-cli --allow-cwd -- copilot"
 # Init scripts
 starship init fish | source
 zoxide init fish | source
-eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
 mise activate fish | source
 ### bling.fish source start
 test -f /usr/share/ublue-os/bling/bling.fish && source /usr/share/ublue-os/bling/bling.fish

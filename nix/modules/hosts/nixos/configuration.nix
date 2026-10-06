@@ -77,7 +77,6 @@
     # $ nix search <package>
     environment.systemPackages = with pkgs; [
       # Dev tools
-      fnm
       git
       gh
       

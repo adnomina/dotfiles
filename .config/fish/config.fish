@@ -1,14 +1,7 @@
-# The following lines were added by Docker Desktop to add commands to your PATH.
-export PATH="$PATH:/Users/nicolas/.docker/bin"
-# End of Docker Desktop section.
-
 # Variables
-set -gx EDITOR hx
-set -gx PATH /run/current-system/sw/bin $PATH
-set -gx PNPM_HOME /Users/nicolas/Library/pnpm
-if not string match -q -- "$PNPM_HOME/bin" $PATH
-    set -gx PATH "$PNPM_HOME/bin" $PATH
-end
+type -q hx && set -gx EDITOR hx
+test -d /Users/nicolas/.docker/bin && set -gx PATH /Users/nicolas/.docker/bin $PATH
+test -d /run/current-system/sw/bin && set -gx PATH /run/current-system/sw/bin $PATH
 
 # Functions
 function fish_greeting
@@ -45,9 +38,9 @@ abbr -a oc nono run --profile opencode --allow . -- opencode
 abbr -a co nono run --profile copilot-cli --allow-cwd -- copilot
 
 # Init scripts
-starship init fish | source
-zoxide init fish | source
-mise activate fish | source
+type -q starship && starship init fish | source
+type -q zoxide && zoxide init fish | source
+type -q mise && mise activate fish | source
 ### bling.fish source start
 test -f /usr/share/ublue-os/bling/bling.fish && source /usr/share/ublue-os/bling/bling.fish
 ### bling.fish source end

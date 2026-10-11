@@ -15,40 +15,34 @@ function fish_greeting
     printf (set_color --bold 00FFFF)"Greetings, User. Welcome to the Grid.\n"(set_color normal)
 end
 
-function rr
-    set cmd (history | fzf --header "Choose the command to rerun.")
+# Abbreviations
+abbr -a la ls -la
+abbr -a vi nvim
+abbr -a vim nvim
 
-    eval "$cmd"
-end
+abbr -a ga git add
+abbr -a gb git branch -l
+abbr -a gc git commit
+abbr -a gd git diff
+abbr -a gf git fetch
+abbr -a gl git log
+abbr -a gm git merge
+abbr -a gpl git pull
+abbr -a gps git push
+abbr -a gr git restore
+abbr -a gst git status
+abbr -a gsc git switch -c
+abbr -a gsw git switch
 
-# Aliases
-alias la="ls -la"
-alias vi='nvim'
-alias vim='nvim'
+abbr -a dcu docker compose up
+abbr -a dcw docker compose watch
+abbr -a dcd docker compose down
+abbr -a dcp docker compose ps
+abbr -a dcl docker compose logs -f
 
-alias ga="git add"
-alias gb="git branch -l"
-alias gc="git commit"
-alias gd="git diff"
-alias gf="git fetch"
-alias gl="git log"
-alias gm="git merge"
-alias gpl="git pull"
-alias gps="git push"
-alias gr="git restore"
-alias gst="git status"
-alias gsc="git switch -c"
-alias gsw="git switch"
-
-alias dcu="docker compose up"
-alias dcw="docker compose watch"
-alias dcd="docker compose down"
-alias dcp="docker compose ps"
-alias dcl="docker compose logs -f"
-
-alias cc="nono run --profile claude --allow . -- claude"
-alias oc="nono run --profile opencode --allow . -- opencode"
-alias co="nono run --profile copilot-cli --allow-cwd -- copilot"
+abbr -a cc nono run --profile claude --allow . -- claude
+abbr -a oc nono run --profile opencode --allow . -- opencode
+abbr -a co nono run --profile copilot-cli --allow-cwd -- copilot
 
 # Init scripts
 starship init fish | source

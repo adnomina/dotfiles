@@ -43,7 +43,7 @@
     },
     "bottom_dock_layout": "full",
     "terminal": {
-        "font_family": "MonaspiceNe Nerd Font",
+        "font_family": "Monaspace Neon NF",
         "keep_selection_on_copy": false,
         "copy_on_select": true,
         "option_as_meta": true,

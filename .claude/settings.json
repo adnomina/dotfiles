@@ -33,20 +33,26 @@
     "command": "~/.claude/statusline.sh"
   },
   "enabledPlugins": {
-    "i-have-adhd@i-have-adhd": true,
-    "guardrails@peerigon-claude-plugins": true
+    "guardrails@peerigon-claude-plugins": true,
+    "gitkraken-hooks@gitkraken": true
   },
   "extraKnownMarketplaces": {
-    "i-have-adhd": {
-      "source": {
-        "source": "github",
-        "repo": "ayghri/i-have-adhd"
-      }
-    },
     "peerigon-claude-plugins": {
       "source": {
         "source": "github",
         "repo": "peerigon/claude-plugins"
+      }
+    },
+    "gitkraken": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/nicolas/.claude/plugins/marketplaces/gitkraken"
+      }
+    },
+    "mattpocock": {
+      "source": {
+        "source": "github",
+        "repo": "mattpocock/skills"
       }
     }
   },
@@ -54,6 +60,6 @@
   "feedbackSurveyRate": 0,
   "spinnerTipsEnabled": false,
   "effortLevel": "medium",
-  "theme": "dark",
-  "awaySummaryEnabled": false
+  "awaySummaryEnabled": false,
+  "theme": "dark"
 }

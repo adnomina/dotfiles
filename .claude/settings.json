@@ -34,7 +34,8 @@
   },
   "enabledPlugins": {
     "guardrails@peerigon-claude-plugins": true,
-    "gitkraken-hooks@gitkraken": true
+    "gitkraken-hooks@gitkraken": true,
+    "mattpocock-skills@mattpocock": true
   },
   "extraKnownMarketplaces": {
     "peerigon-claude-plugins": {

@@ -32,31 +32,8 @@
     "type": "command",
     "command": "~/.claude/statusline.sh"
   },
-  "enabledPlugins": {
-    "guardrails@peerigon-claude-plugins": true,
-    "gitkraken-hooks@gitkraken": true,
-    "mattpocock-skills@mattpocock": true
-  },
-  "extraKnownMarketplaces": {
-    "peerigon-claude-plugins": {
-      "source": {
-        "source": "github",
-        "repo": "peerigon/claude-plugins"
-      }
-    },
-    "gitkraken": {
-      "source": {
-        "source": "directory",
-        "path": "/Users/nicolas/.claude/plugins/marketplaces/gitkraken"
-      }
-    },
-    "mattpocock": {
-      "source": {
-        "source": "github",
-        "repo": "mattpocock/skills"
-      }
-    }
-  },
+  "enabledPlugins": {},
+  "extraKnownMarketplaces": {},
   "outputStyle": "Concise",
   "feedbackSurveyRate": 0,
   "spinnerTipsEnabled": false,

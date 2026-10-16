@@ -1,29 +1,4 @@
 {
-  "extraKnownMarketplaces": {
-    "beat-marketplace": {
-      "source": {
-        "source": "github",
-        "repo": "https://mercedes-benz.ghe.com/BEATeam/BEAT_R-Platform-Marketplace.git"
-      }
-    },
-    "nolabs-ai": {
-      "source": {
-        "source": "github",
-        "repo": "nolabs-ai/nono-packs-copilot"
-      }
-    },
-    "i-have-adhd": {
-      "source": {
-        "source": "github",
-        "repo": "ayghri/i-have-adhd"
-      }
-    }
-  },
-  "enabledPlugins": {
-    "project-management@beat-marketplace": true,
-    "guardrails@beat-marketplace": true,
-    "i-have-adhd@i-have-adhd": true
-  },
   "model": "auto",
   "askUser": true,
   "banner": "never",

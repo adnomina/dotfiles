@@ -35,16 +35,30 @@ if OS.linux?
 end
 
 if OS.mac?
-  cask "firefox-developer-edition"
+  tap "docker/tap", trusted: true
+
+  # Agent multiplexer that lives in your terminal
+  brew "herdr"
+
+  # Web browser
+  cask "firefox"
+  # Terminal emulator that uses platform-native UI and GPU acceleration
   cask "ghostty"
   cask "claude-code"
   cask "copilot-cli"
   brew "opencode"
+  # Universal database tool and SQL client
   cask "dbeaver-community"
-  cask "docker"
-  cask "netnewswire"
+  # App to build and share containerised applications and microservices
+  cask "docker-desktop"
+  # Knowledge base that works on top of a local folder of plain text Markdown files
   cask "obsidian"
+  # Build, run, and govern agents across the software development lifecycle
+  cask "docker/tap/sbx", trusted: true
+  # Team communication and collaboration software
   cask "slack"
+  # REST, GraphQL and gRPC client
   cask "yaak"
+  # Multiplayer code editor
   cask "zed"
 end

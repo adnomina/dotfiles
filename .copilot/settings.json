@@ -38,5 +38,14 @@
     }
   },
   "effortLevel": "auto",
-  "stream": true
+  "stream": true,
+  "extraKnownMarketplaces": {
+    "mattpocock": {
+      "source": {
+        "source": "github",
+        "repo": "mattpocock/skills"
+      },
+      "autoUpdate": true
+    }
+  }
 }

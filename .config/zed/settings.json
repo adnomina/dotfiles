@@ -59,7 +59,7 @@
         "show": "never",
     },
     "git_panel": {
-        "group_by": "staging",
+        "group_by": "none",
         "tree_view": true,
     },
     // Editor
@@ -137,9 +137,10 @@
         },
         "github-copilot-cli": {
             "default_config_options": {
-                "reasoning_effort": "high",
+                "allow_all": "on",
+                "reasoning_effort": "medium",
                 "mode": "https://agentclientprotocol.com/protocol/session-modes#agent",
-                "model": "auto",
+                "model": "gpt-6-luna",
             },
             "type": "registry",
         },

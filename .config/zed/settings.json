@@ -33,6 +33,7 @@
         "button": false,
     },
     "agent": {
+        "notify_when_agent_waiting": "never",
         "default_profile": "ask",
         "flexible": false,
         "inline_assistant_model": {
@@ -59,7 +60,7 @@
         "show": "never",
     },
     "git_panel": {
-        "group_by": "none",
+        "group_by": "staging",
         "tree_view": true,
     },
     // Editor
@@ -140,7 +141,7 @@
                 "allow_all": "on",
                 "reasoning_effort": "medium",
                 "mode": "https://agentclientprotocol.com/protocol/session-modes#agent",
-                "model": "gpt-6-luna",
+                "model": "auto",
             },
             "type": "registry",
         },

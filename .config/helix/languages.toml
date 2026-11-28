@@ -1,3 +1,98 @@
+# Language servers
+[language-server.vtsls]
+command = "vtsls"
+args = ["--stdio"]
+config = { vtsls = { enableMoveToFileCodeAction = true }, typescript = { updateImportsOnFileMove = { enabled = "always" } }, javascript = { updateImportsOnFileMove = { enabled = "always" } } }
+
+[language-server.eslint]
+command = "vscode-eslint-language-server"
+args = ["--stdio"]
+config = { validate = "on" }
+
+[language-server.tailwindcss-language-server]
+command = "tailwindcss-language-server"
+args = ["--stdio"]
+config = { tailwindCSS = { classFunctions = ["cva", "cx"] } }
+
+[language-server.emmet]
+command = "emmet-language-server"
+args = ["--stdio"]
+
+[language-server.vscode-html-language-server]
+command = "vscode-html-language-server"
+args = ["--stdio"]
+
+[language-server.vscode-css-language-server]
+command = "vscode-css-language-server"
+args = ["--stdio"]
+
+[language-server.vscode-json-language-server]
+command = "vscode-json-language-server"
+args = ["--stdio"]
+
+[language-server.basedpyright]
+command = "basedpyright-langserver"
+args = ["--stdio"]
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+# Python
 [[language]]
 name = "python"
-language-servers = [ "basedpyright" ]
+language-servers = ["basedpyright", "ruff"]
+auto-format = true
+formatter = { command = "ruff", args = ["format", "-"] }
+indent = { tab-width = 4, unit = "    " }
+
+# TypeScript / JavaScript / React
+[[language]]
+name = "typescript"
+language-servers = ["vtsls", "eslint", "tailwindcss-language-server"]
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "tsx"
+language-servers = ["vtsls", "eslint", "tailwindcss-language-server", "emmet"]
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "javascript"
+language-servers = ["vtsls", "eslint", "tailwindcss-language-server"]
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "babel"] }
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "jsx"
+language-servers = ["vtsls", "eslint", "tailwindcss-language-server", "emmet"]
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "babel"] }
+indent = { tab-width = 4, unit = "    " }
+
+# HTML / CSS / JSON
+[[language]]
+name = "html"
+language-servers = ["vscode-html-language-server", "tailwindcss-language-server", "emmet"]
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "html"] }
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "css"
+language-servers = ["vscode-css-language-server", "tailwindcss-language-server", "emmet"]
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "css"] }
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "json"
+language-servers = ["vscode-json-language-server"]
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "json"] }
+indent = { tab-width = 4, unit = "    " }

@@ -1,53 +1,54 @@
 {
-    "model": "auto",
-    "askUser": true,
-    "banner": "never",
-    "compactPaste": true,
-    "copyOnSelect": true,
-    "experimental": true,
-    "includeCoAuthoredBy": false,
-    "memory": true,
-    "renderMarkdown": true,
-    "respectGitignore": true,
-    "showReasoning": false,
-    "showTipsOnStartup": false,
-    "terminalProgress": true,
-    "ide": {
-        "autoConnect": false
-    },
-    "updateTerminalTitle": true,
-    "footer": {
-        "showModelEffort": true,
-        "showDirectory": true,
-        "showBranch": true,
-        "showContextWindow": true,
-        "showQuota": true,
-        "showAiUsed": true,
-        "showAgent": true,
-        "showCodeChanges": true,
-        "showUsername": true,
-        "showSandbox": true,
-        "showCustom": true
-    },
-    "subagents": {
-        "agents": {
-            "rubber-duck": {
-                "autoInvoke": true
-            }
-        }
-    },
-    "effortLevel": "auto",
-    "stream": true,
-    "extraKnownMarketplaces": {
-        "googlechrome": {
-            "source": {
-                "source": "github",
-                "repo": "GoogleChrome/modern-web-guidance"
-            }
-        }
-    },
-    "enabledPlugins": {
-        "modern-web-guidance@googlechrome": true
-    },
-    "theme": "github"
+  "model": "auto",
+  "askUser": true,
+  "banner": "never",
+  "compactPaste": true,
+  "copyOnSelect": true,
+  "experimental": true,
+  "includeCoAuthoredBy": false,
+  "memory": true,
+  "renderMarkdown": true,
+  "respectGitignore": true,
+  "showReasoning": false,
+  "showTipsOnStartup": false,
+  "terminalProgress": true,
+  "ide": {
+    "autoConnect": false
+  },
+  "updateTerminalTitle": true,
+  "footer": {
+    "showModelEffort": true,
+    "showDirectory": true,
+    "showBranch": true,
+    "showContextWindow": true,
+    "showQuota": true,
+    "showAiUsed": true,
+    "showAgent": true,
+    "showCodeChanges": true,
+    "showUsername": true,
+    "showSandbox": true,
+    "showCustom": true
+  },
+  "subagents": {
+    "agents": {
+      "rubber-duck": {
+        "autoInvoke": true
+      }
+    }
+  },
+  "effortLevel": "auto",
+  "stream": true,
+  "extraKnownMarketplaces": {
+    "googlechrome": {
+      "source": {
+        "source": "github",
+        "repo": "GoogleChrome/modern-web-guidance"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "modern-web-guidance@googlechrome": true,
+    "mattpocock-skills@mattpocock": false
+  },
+  "theme": "github"
 }
